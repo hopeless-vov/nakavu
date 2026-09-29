@@ -72,6 +72,10 @@
     "admin": {
       "title": "Beheeroverzicht",
       "description": "Statistieken en leden van de workspace."
+    },
+    "account": {
+      "title": "Account",
+      "description": "Profiel, meldingen en voorkeuren."
     }
   },
   "common": {
@@ -893,6 +897,55 @@
       "removed": "Lid verwijderd.",
       "deleted": "{name} verwijderd.",
       "saved": "Instellingen opgeslagen."
+    }
+  },
+  "account": {
+    "title": "Accountinstellingen",
+    "photo": "Foto wijzigen",
+    "saveProfile": "Wijzigingen opslaan",
+    "discard": "Wijzigingen verwerpen",
+    "preferences": "Voorkeuren",
+    "timezone": "Je tijdzone (voor tijden in e-mails)",
+    "email": {
+      "title": "E-mail",
+      "current": "Nu: {email}",
+      "placeholder": "nieuw{'@'}email.nl",
+      "change": "E-mail wijzigen",
+      "sent": "We hebben een bevestiging naar het nieuwe adres gestuurd."
+    },
+    "notifications": {
+      "title": "Meldingen",
+      "notifyMatch": {
+        "title": "Nieuwe match",
+        "body": "Een mail op de rondedag: met wie je afspreekt en waarover jullie kunnen praten."
+      },
+      "notifyReminder": {
+        "title": "Herinnering vóór een ronde",
+        "body": "Drie dagen van tevoren, zodat je kunt overslaan als het druk is."
+      },
+      "notifyFeedback": {
+        "title": "“Hebben jullie afgesproken?”",
+        "body": "Een korte check halverwege de ronde."
+      },
+      "notifyProduct": {
+        "title": "Nieuws van Nakavu",
+        "body": "Zelden, en alleen als het ertoe doet."
+      }
+    },
+    "delete": {
+      "title": "Account verwijderen",
+      "body": "Verwijdert je profiel en matchgeschiedenis uit alle workspaces. Dit kan niet ongedaan worden gemaakt.",
+      "button": "Account verwijderen",
+      "confirmTitle": "Je account verwijderen?",
+      "confirmBody": "Je profiel, matches en lidmaatschappen worden definitief verwijderd. Typ “{word}” om te bevestigen.",
+      "typeLabel": "Bevestiging",
+      "word": "verwijderen",
+      "keep": "Account behouden",
+      "confirm": "Definitief verwijderen"
+    },
+    "toast": {
+      "saved": "Opgeslagen.",
+      "photo": "Foto bijgewerkt."
     }
   }
 }

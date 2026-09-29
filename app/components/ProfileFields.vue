@@ -139,24 +139,23 @@ const formats: { value: MeetingFormat; label: string; description: string }[] = 
           @remove="form.toggle('interests', custom)"
         />
       </div>
-      <form
-        class="mt-4 flex gap-2"
-        @submit.prevent="form.addCustomInterest"
-      >
+      <!-- Not a <form>: this editor lives inside the profile form. Enter adds, not submits. -->
+      <div class="mt-4 flex gap-2">
         <TextField
           v-model="form.customInterest.value"
           class="flex-1"
           :placeholder="t('profile.customInterest')"
           :maxlength="40"
+          @enter.prevent="form.addCustomInterest"
         />
         <BaseButton
-          type="submit"
           variant="secondary"
           :disabled="!form.customInterest.value.trim()"
+          @click="form.addCustomInterest"
         >
           {{ t('profile.add') }}
         </BaseButton>
-      </form>
+      </div>
       <div class="mt-7">
         <TextField
           v-model="form.draft.askMeAbout"

@@ -72,6 +72,10 @@
     "admin": {
       "title": "Admin overview",
       "description": "Workspace stats and members."
+    },
+    "account": {
+      "title": "Account",
+      "description": "Profile, notifications and preferences."
     }
   },
   "common": {
@@ -893,6 +897,55 @@
       "removed": "Member removed.",
       "deleted": "{name} deleted.",
       "saved": "Settings saved."
+    }
+  },
+  "account": {
+    "title": "Account settings",
+    "photo": "Change photo",
+    "saveProfile": "Save changes",
+    "discard": "Discard changes",
+    "preferences": "Preferences",
+    "timezone": "Your time zone (for times in emails)",
+    "email": {
+      "title": "Email",
+      "current": "Currently: {email}",
+      "placeholder": "new{'@'}email.com",
+      "change": "Change email",
+      "sent": "We sent a confirmation to the new address."
+    },
+    "notifications": {
+      "title": "Notifications",
+      "notifyMatch": {
+        "title": "New match",
+        "body": "An email on round day: who you’re meeting and what to talk about."
+      },
+      "notifyReminder": {
+        "title": "Reminder before a round",
+        "body": "Three days ahead, so you can skip if you’re busy."
+      },
+      "notifyFeedback": {
+        "title": "“Did you meet?”",
+        "body": "A light check-in halfway through a round."
+      },
+      "notifyProduct": {
+        "title": "Nakavu news",
+        "body": "Rarely, and only when it matters."
+      }
+    },
+    "delete": {
+      "title": "Delete account",
+      "body": "Removes your profile and match history from every workspace. This can’t be undone.",
+      "button": "Delete account",
+      "confirmTitle": "Delete your account?",
+      "confirmBody": "Your profile, matches and workspace memberships will be permanently removed. Type “{word}” to confirm.",
+      "typeLabel": "Confirmation",
+      "word": "delete",
+      "keep": "Keep my account",
+      "confirm": "Delete forever"
+    },
+    "toast": {
+      "saved": "Saved.",
+      "photo": "Photo updated."
     }
   }
 }

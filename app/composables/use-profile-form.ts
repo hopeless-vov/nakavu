@@ -44,10 +44,13 @@ export function useProfileForm(options: { onboarding?: boolean } = {}) {
   // Pre-fill languages with the interface language for new people.
   if (options.onboarding && draft.languages.length === 0) draft.languages.push(String(session.profile?.locale ?? 'uk'))
 
+  // Follow the stored profile (e.g. after a notification toggle) — but never
+  // overwrite edits the person hasn't saved yet.
   watch(
     () => session.profile,
-    (p) => {
-      if (!options.onboarding) Object.assign(draft, fromProfile(p))
+    (p, old) => {
+      const untouched = JSON.stringify(draft) === JSON.stringify(fromProfile(old ?? null))
+      if (!options.onboarding && untouched) Object.assign(draft, fromProfile(p))
     },
   )
 

@@ -27,5 +27,6 @@ export const routes: AppRoute[] = [
   { name: 'workspace-new', path: '/app/workspaces/new', view: 'WorkspaceCreateView', meta: { access: 'onboarded', layout: 'app' } },
   { name: 'workspace-invite', path: '/app/workspaces/:slug/invite', view: 'WorkspaceInviteView', meta: { access: 'onboarded', layout: 'app' } },
   { name: 'workspace-admin', path: '/app/workspaces/:slug/admin', view: 'WorkspaceAdminView', meta: { access: 'onboarded', layout: 'app' } },
+  { name: 'account', path: '/app/account', view: 'AccountView', meta: { access: 'onboarded', layout: 'app' } },
   { name: 'not-found', path: '/:pathMatch(.*)*', view: 'NotFoundView', meta: { access: 'public', layout: 'site' } },
 ]

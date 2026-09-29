@@ -74,6 +74,10 @@ export const useSessionStore = defineStore('session', () => {
     return updateProfile({ avatarUrl: await profilesApi.uploadAvatar(userId.value, file) })
   }
 
+  async function changeEmail(address: string, redirectTo: string) {
+    await authApi.changeEmail(address.trim().toLowerCase(), redirectTo)
+  }
+
   async function signOut() {
     await authApi.signOut()
     session.value = null
@@ -109,6 +113,7 @@ export const useSessionStore = defineStore('session', () => {
     exchangeOAuthCode,
     updateProfile,
     uploadAvatar,
+    changeEmail,
     signOut,
     deleteAccount,
     dispose,

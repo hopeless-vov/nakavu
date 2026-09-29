@@ -4,6 +4,8 @@ export default defineVitestConfig({
   test: {
     environment: 'happy-dom',
     globals: true,
+    // Each Nuxt-environment file boots a Nuxt app; cap parallel workers to keep memory in check.
+    maxWorkers: 3,
     include: ['tests/unit/**/*.test.ts'],
     setupFiles: ['tests/unit/setup.ts'],
     // happy-dom's Web Animations stub rejects finished promises when motion-v cancels an animation.

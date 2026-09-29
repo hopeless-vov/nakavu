@@ -163,7 +163,7 @@ describe('profile components', () => {
 
     form.customInterest.value = 'Kayaking'
     await flushPromises()
-    await w.findAll('form').at(-1)!.trigger('submit')
+    await w.findAll('button').find((b) => b.text() === 'Додати')!.trigger('click')
     await flushPromises()
     expect(w.text()).toContain('Kayaking')
     const remove = w.find('button[aria-label="Прибрати"]')
