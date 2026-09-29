@@ -76,6 +76,9 @@ export default defineNuxtConfig({
     '/auth/**': { ssr: false },
     '/en/auth/**': { ssr: false },
     '/nl/auth/**': { ssr: false },
+    '/join/**': { ssr: false },
+    '/en/join/**': { ssr: false },
+    '/nl/join/**': { ssr: false },
   },
 
   nitro: {

@@ -48,6 +48,18 @@
     "dashboard": {
       "title": "Home",
       "description": "Your coffee match and the next round."
+    },
+    "createWorkspace": {
+      "title": "New workspace",
+      "description": "Create a Nakavu workspace."
+    },
+    "invite": {
+      "title": "Invite people",
+      "description": "Your workspace invite link."
+    },
+    "join": {
+      "title": "You’re invited to Nakavu",
+      "description": "You’ve been invited to a coffee roulette."
     }
   },
   "common": {
@@ -674,5 +686,107 @@
       "What did you want to be as a kid?",
       "What would you do with a free Friday?"
     ]
+  },
+  "cadence": {
+    "weekly": "Weekly",
+    "weeklyHint": "Once a week",
+    "biweekly": "Every 2 weeks",
+    "biweeklyHint": "Even weeks",
+    "monthly": "Monthly",
+    "monthlyHint": "The classic",
+    "bimonthly": "Every 2 months",
+    "bimonthlyHint": "Odd months",
+    "quarterly": "Quarterly",
+    "quarterlyHint": "Jan, Apr, Jul, Oct"
+  },
+  "workspaceForm": {
+    "stepDetails": "Details",
+    "stepInvite": "Invite",
+    "createTitle": "Create a workspace",
+    "createSubtitle": "A workspace is one group that gets matched together: a company, an office, a guild or friends.",
+    "details": "About the workspace",
+    "name": "Name",
+    "namePlaceholder": "e.g. Northwind Group",
+    "kind": {
+      "label": "Who it’s for",
+      "work": "Work",
+      "workHint": "Colleagues, office, guild",
+      "friends": "Friends",
+      "friendsHint": "Club, community, friends"
+    },
+    "logo": "Upload a logo",
+    "logoHint": "Square, at least 256 px, up to 1 MB",
+    "domains": "Allowed email domains (optional)",
+    "domainsHint": "Leave empty and anyone with the invite link can join.",
+    "domainPlaceholder": "Add a domain and press Enter",
+    "matching": "How we match",
+    "size": {
+      "2": "1 partner",
+      "3": "2 partners",
+      "label": "Group size",
+      "2Hint": "Pairs",
+      "3Hint": "Groups of three"
+    },
+    "cadence": "How often",
+    "day": "Day of the month",
+    "weekday": "Day of the week",
+    "hour": "Time",
+    "timezone": "Time zone",
+    "dayOfMonth": "On the {day}",
+    "create": "Create workspace",
+    "summary": "Summary",
+    "summarySize": {
+      "2": "Pairs: one partner each round",
+      "3": "Groups of three: two partners each round"
+    },
+    "summaryDomains": "Only {domains} addresses",
+    "summaryOpen": "Anyone with the link can join",
+    "upcoming": "Upcoming rounds",
+    "errors": {
+      "name": "Give your workspace a name.",
+      "nameLong": "Keep it under 80 characters.",
+      "domain": "That doesn’t look like a domain, e.g. company.com",
+      "logo": "That file is too big — up to 1 MB."
+    }
+  },
+  "invite": {
+    "title": "{name} is ready!",
+    "subtitle": "Share this link. Everyone who joins before {date} is in the first round.",
+    "link": "Invite link",
+    "copy": "Copy link",
+    "copied": "Copied ✓",
+    "share": "Share…",
+    "shareText": "Join the “{name}” coffee roulette on Nakavu",
+    "rotate": "Generate a new link",
+    "domainsNote": "The link only works for {domains} addresses. Personal invites work for anyone.",
+    "byEmail": "Or invite by email",
+    "emailsPlaceholder": "olena{'@'}company.com, taras{'@'}company.com",
+    "emailsHint": "Separate with commas, spaces or new lines.",
+    "count": "{count} address | {count} addresses",
+    "send": "Send invites",
+    "sent": "Sent {count} invite | Sent {count} invites",
+    "pending": "Waiting to join",
+    "revoke": "Revoke",
+    "toAdmin": "Go to admin overview",
+    "toDashboard": "Back to home",
+    "errors": {
+      "none": "Add at least one address.",
+      "invalid": "These don’t look like emails: {list}"
+    }
+  },
+  "join": {
+    "kind": {
+      "work": "Work workspace",
+      "friends": "Friends’ workspace"
+    },
+    "title": "You’re invited to {name}",
+    "meta": "{count} member · next round {date} | {count} members · next round {date}",
+    "domains": "Open to {domains}",
+    "mismatch": "You’re signed in as {email}, but this workspace is only open to {domains}. Sign in with another email.",
+    "join": "Join {name}",
+    "signIn": "Sign in to join",
+    "note": "Once a round we’ll introduce you to someone for coffee. You can skip any time.",
+    "missingTitle": "Invite not found",
+    "missingBody": "The link may have been replaced. Ask whoever invited you for a fresh one."
   }
 }

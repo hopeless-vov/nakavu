@@ -48,6 +48,18 @@
     "dashboard": {
       "title": "Home",
       "description": "Je koffiematch en de volgende ronde."
+    },
+    "createWorkspace": {
+      "title": "Nieuwe workspace",
+      "description": "Maak een Nakavu-workspace."
+    },
+    "invite": {
+      "title": "Mensen uitnodigen",
+      "description": "De uitnodigingslink van je workspace."
+    },
+    "join": {
+      "title": "Uitgenodigd voor Nakavu",
+      "description": "Je bent uitgenodigd voor een koffieroulette."
     }
   },
   "common": {
@@ -674,5 +686,107 @@
       "Wat wilde je vroeger worden?",
       "Wat zou je doen met een vrije vrijdag?"
     ]
+  },
+  "cadence": {
+    "weekly": "Wekelijks",
+    "weeklyHint": "Eén keer per week",
+    "biweekly": "Om de 2 weken",
+    "biweeklyHint": "Even weken",
+    "monthly": "Maandelijks",
+    "monthlyHint": "De klassieker",
+    "bimonthly": "Om de 2 maanden",
+    "bimonthlyHint": "Oneven maanden",
+    "quarterly": "Per kwartaal",
+    "quarterlyHint": "Jan, apr, jul, okt"
+  },
+  "workspaceForm": {
+    "stepDetails": "Details",
+    "stepInvite": "Uitnodigen",
+    "createTitle": "Maak een workspace",
+    "createSubtitle": "Een workspace is één groep die samen gematcht wordt: een bedrijf, een kantoor, een gilde of vrienden.",
+    "details": "Over de workspace",
+    "name": "Naam",
+    "namePlaceholder": "bijv. Northwind Group",
+    "kind": {
+      "label": "Voor wie",
+      "work": "Werk",
+      "workHint": "Collega’s, kantoor, gilde",
+      "friends": "Vrienden",
+      "friendsHint": "Club, community, vrienden"
+    },
+    "logo": "Logo uploaden",
+    "logoHint": "Vierkant, minstens 256 px, max. 1 MB",
+    "domains": "Toegestane e-maildomeinen (optioneel)",
+    "domainsHint": "Laat leeg en iedereen met de link kan meedoen.",
+    "domainPlaceholder": "Voeg een domein toe en druk op Enter",
+    "matching": "Hoe we matchen",
+    "size": {
+      "2": "1 partner",
+      "3": "2 partners",
+      "label": "Groepsgrootte",
+      "2Hint": "Koppels",
+      "3Hint": "Groepjes van drie"
+    },
+    "cadence": "Hoe vaak",
+    "day": "Dag van de maand",
+    "weekday": "Dag van de week",
+    "hour": "Tijd",
+    "timezone": "Tijdzone",
+    "dayOfMonth": "Op de {day}e",
+    "create": "Workspace maken",
+    "summary": "Samenvatting",
+    "summarySize": {
+      "2": "Koppels: één partner per ronde",
+      "3": "Groepjes van drie: twee partners per ronde"
+    },
+    "summaryDomains": "Alleen {domains}-adressen",
+    "summaryOpen": "Iedereen met de link kan meedoen",
+    "upcoming": "Komende rondes",
+    "errors": {
+      "name": "Geef je workspace een naam.",
+      "nameLong": "Maximaal 80 tekens.",
+      "domain": "Dat lijkt geen domein, bijv. bedrijf.nl",
+      "logo": "Dat bestand is te groot — max. 1 MB."
+    }
+  },
+  "invite": {
+    "title": "{name} staat klaar!",
+    "subtitle": "Deel deze link. Iedereen die vóór {date} meedoet, zit in de eerste ronde.",
+    "link": "Uitnodigingslink",
+    "copy": "Link kopiëren",
+    "copied": "Gekopieerd ✓",
+    "share": "Delen…",
+    "shareText": "Doe mee met de koffieroulette “{name}” op Nakavu",
+    "rotate": "Nieuwe link maken",
+    "domainsNote": "De link werkt alleen voor {domains}-adressen. Persoonlijke uitnodigingen werken voor iedereen.",
+    "byEmail": "Of nodig uit per e-mail",
+    "emailsPlaceholder": "olena{'@'}bedrijf.nl, taras{'@'}bedrijf.nl",
+    "emailsHint": "Scheid met komma’s, spaties of nieuwe regels.",
+    "count": "{count} adres | {count} adressen",
+    "send": "Uitnodigingen versturen",
+    "sent": "{count} uitnodiging verstuurd | {count} uitnodigingen verstuurd",
+    "pending": "Nog niet gereageerd",
+    "revoke": "Intrekken",
+    "toAdmin": "Naar het beheeroverzicht",
+    "toDashboard": "Terug naar home",
+    "errors": {
+      "none": "Voeg minstens één adres toe.",
+      "invalid": "Dit lijken geen e-mailadressen: {list}"
+    }
+  },
+  "join": {
+    "kind": {
+      "work": "Werkworkspace",
+      "friends": "Vriendenworkspace"
+    },
+    "title": "Je bent uitgenodigd voor {name}",
+    "meta": "{count} lid · volgende ronde {date} | {count} leden · volgende ronde {date}",
+    "domains": "Open voor {domains}",
+    "mismatch": "Je bent ingelogd als {email}, maar deze workspace is alleen open voor {domains}. Log in met een ander e-mailadres.",
+    "join": "Doe mee met {name}",
+    "signIn": "Inloggen en meedoen",
+    "note": "Eén keer per ronde stellen we je voor aan iemand voor koffie. Je kunt altijd overslaan.",
+    "missingTitle": "Uitnodiging niet gevonden",
+    "missingBody": "De link is misschien vervangen. Vraag degene die je uitnodigde om een nieuwe."
   }
 }

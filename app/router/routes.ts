@@ -19,7 +19,10 @@ export const routes: AppRoute[] = [
   { name: 'terms', path: '/terms', view: 'TermsView', meta: { access: 'public', layout: 'site' } },
   { name: 'sign-in', path: '/sign-in', view: 'SignInView', meta: { access: 'guest', layout: 'bare' } },
   { name: 'auth-confirm', path: '/auth/confirm', view: 'AuthConfirmView', meta: { access: 'public', layout: 'bare' } },
+  { name: 'join', path: '/join/:token', view: 'JoinView', meta: { access: 'public', layout: 'bare' } },
   { name: 'onboarding', path: '/onboarding', view: 'OnboardingView', meta: { access: 'auth', layout: 'bare' } },
   { name: 'dashboard', path: '/app', view: 'DashboardView', meta: { access: 'onboarded', layout: 'app' } },
+  { name: 'workspace-new', path: '/app/workspaces/new', view: 'WorkspaceCreateView', meta: { access: 'onboarded', layout: 'app' } },
+  { name: 'workspace-invite', path: '/app/workspaces/:slug/invite', view: 'WorkspaceInviteView', meta: { access: 'onboarded', layout: 'app' } },
   { name: 'not-found', path: '/:pathMatch(.*)*', view: 'NotFoundView', meta: { access: 'public', layout: 'site' } },
 ]
