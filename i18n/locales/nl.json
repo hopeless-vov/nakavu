@@ -64,6 +64,10 @@
     "workspaces": {
       "title": "Workspaces",
       "description": "Beheer je deelname aan workspaces."
+    },
+    "history": {
+      "title": "Geschiedenis",
+      "description": "Al je koffiematches."
     }
   },
   "common": {
@@ -824,6 +828,17 @@
       "skipping": "Overgeslagen. Tot {date}!",
       "notSkipping": "Je doet mee op {date}.",
       "left": "Je hebt {name} verlaten."
+    }
+  },
+  "history": {
+    "title": "Matchgeschiedenis",
+    "summary": "{count} koffie sinds {since}. {met} daarvan gebeurd. | {count} koffies sinds {since}. {met} daarvan gebeurd.",
+    "all": "Alle",
+    "filter": "Filter op workspace",
+    "left": "Lid vertrokken",
+    "empty": {
+      "title": "Nog niets",
+      "body": "Na je eerste ronde staan al je matches hier — en kun je aangeven of jullie hebben afgesproken."
     }
   }
 }

@@ -64,6 +64,10 @@
     "workspaces": {
       "title": "Workspaces",
       "description": "Manage your workspace participation."
+    },
+    "history": {
+      "title": "History",
+      "description": "All your coffee matches."
     }
   },
   "common": {
@@ -824,6 +828,17 @@
       "skipping": "Skipping. See you on {date}!",
       "notSkipping": "You’re in for {date}.",
       "left": "You left {name}."
+    }
+  },
+  "history": {
+    "title": "Match history",
+    "summary": "{count} coffee since {since}. {met} happened. | {count} coffees since {since}. {met} happened.",
+    "all": "All",
+    "filter": "Filter by workspace",
+    "left": "Member left",
+    "empty": {
+      "title": "Nothing here yet",
+      "body": "After your first round, every match shows up here — and you can mark whether you met."
     }
   }
 }
