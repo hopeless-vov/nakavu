@@ -47,7 +47,7 @@ export default tseslint.config(
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'error',
       '@typescript-eslint/array-type': 'warn',
-      '@typescript-eslint/consistent-type-imports': 'error',
+      '@typescript-eslint/consistent-type-imports': ['error', { disallowTypeAnnotations: false }],
       '@typescript-eslint/naming-convention': [
         'warn',
         { selector: 'default', format: ['camelCase'], leadingUnderscore: 'allow' },
@@ -91,6 +91,10 @@ export default tseslint.config(
     files: ['**/index.ts'],
     ignores: ['node_modules/**', '.nuxt/**', 'supabase/**'],
     rules: { 'no-restricted-syntax': ['error', { selector: 'ExportAllDeclaration', message: 'No barrel exports — import the file directly.' }] },
+  },
+  {
+    files: ['scripts/**/*.mjs'],
+    languageOptions: { globals: { process: 'readonly', console: 'readonly' } },
   },
   {
     ignores: ['app/types/database.ts', '.nuxt/', '.output/', 'node_modules/', 'coverage/', 'playwright-report/', 'test-results/', 'supabase/functions/**', 'supabase/templates/**'],
