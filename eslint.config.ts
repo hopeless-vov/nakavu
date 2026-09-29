@@ -93,6 +93,6 @@ export default tseslint.config(
     rules: { 'no-restricted-syntax': ['error', { selector: 'ExportAllDeclaration', message: 'No barrel exports — import the file directly.' }] },
   },
   {
-    ignores: ['.nuxt/', '.output/', 'node_modules/', 'coverage/', 'playwright-report/', 'test-results/', 'supabase/functions/**', 'supabase/templates/**'],
+    ignores: ['app/types/database.ts', '.nuxt/', '.output/', 'node_modules/', 'coverage/', 'playwright-report/', 'test-results/', 'supabase/functions/**', 'supabase/templates/**'],
   },
 )

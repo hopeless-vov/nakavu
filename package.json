@@ -17,7 +17,10 @@
     "test:db": "supabase test db",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "db:start": "supabase start -x vector,logflare",
+    "db:reset": "supabase db reset",
+    "db:types": "supabase gen types typescript --local > app/types/database.ts"
   },
   "lint-staged": {
     "{app,server,shared,tests}/**/*.{ts,vue}": "eslint --fix"

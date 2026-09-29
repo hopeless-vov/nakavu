@@ -86,3 +86,22 @@ Architecture and conventions are described in [CLAUDE.md](CLAUDE.md).
 - `hreflang`, canonical and `<html lang>` come from `useLocaleHead` in `app.vue`.
 - `@nuxtjs/sitemap` and `@nuxtjs/robots` exclude the private app (`/app`, `/auth`, `/join`, `/onboarding`); public pages are prerendered per locale.
 - Composables that need i18n/router/head are tested in the Nuxt environment (`*.nuxt.test.ts`, `withSetup` helper).
+
+## Database (Supabase)
+
+```bash
+npm run db:start   # local Supabase in Docker (API :55321, Studio :55323, Mailpit :55324)
+npm run db:reset   # re-apply migrations + seed
+npm run db:types   # regenerate app/types/database.ts
+npm run test:db    # pgTAP tests
+```
+
+Local ports are shifted to `553xx` so Nakavu runs alongside other Supabase projects.
+
+**Schema** (`supabase/migrations/`): `profiles` (1:1 with `auth.users`, created by trigger), `workspaces` (schedule: `cadence`, `anchor_day`, `round_hour`, `timezone`, `next_round_at`; `allowed_domains`; `group_size` 2|3; `kind` work|friends), `memberships` (`role` owner|admin|member, `include_in_matching`, `skip_next_round`), `invites` (personal email invites), `rounds`, `matches`, `match_members` (per-person `feedback`), `email_outbox` (service role only).
+
+**RPCs:** `create_workspace`, `workspace_preview` (anon, for `/join/:token`), `join_workspace`, `leave_workspace`, `regenerate_invite_token`, `set_match_feedback`, `my_matches`, `workspace_stats`, `delete_my_account`.
+
+**RLS:** people see their own profile and profiles of people they share a workspace with; workspace data is visible to members; admins manage settings, invites and roles; matches are visible only to their participants. Column-level grants restrict what clients may update.
+
+**Storage:** public buckets `workspace-logos/<workspace_id>/…` (admins write) and `avatars/<user_id>/…` (owner writes).
