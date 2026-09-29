@@ -115,3 +115,11 @@ Local ports are shifted to `553xx` so Nakavu runs alongside other Supabase proje
 **Storage:** public buckets `workspace-logos/<workspace_id>/…` (admins write) and `avatars/<user_id>/…` (owner writes).
 
 `npm run test:db` runs the pgTAP files in `supabase/tests/database/` through `psql` inside the local DB container (`scripts/test-db.mjs`), so it needs no Docker directory sharing.
+
+## Rounds (Edge Functions + pg_cron)
+
+- `supabase/functions/run-due-rounds` — hourly (pg_cron, `5 * * * *`). For every workspace whose `next_round_at` has passed: creates the round (idempotent), matches everyone in the draw (skippers sit out), saves matches, queues emails, clears skips and moves `next_round_at` on. Also queues **reminders** three days before a round and **"did you meet?" nudges** halfway through.
+- `supabase/functions/send-emails` — drains `email_outbox` through Resend (every 5 minutes and right after a run).
+- All decisions live in `supabase/functions/_shared/rounds.ts` behind a `RoundsDb` interface and are unit-tested; `supabase-db.ts` is the thin Supabase adapter.
+- The pure logic in `shared/` is copied to `supabase/functions/_shared/lib/` by `npm run sync:shared`; a unit test fails if the copies drift.
+- Production setup: `supabase secrets set CRON_SECRET=… RESEND_API_KEY=… MAIL_FROM=… SITE_URL=…`, then add Vault secrets `project_url` and `cron_secret` (same value as `CRON_SECRET`) — see `supabase/migrations/*_cron.sql`.

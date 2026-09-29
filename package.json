@@ -21,7 +21,8 @@
     "db:start": "supabase start -x vector,logflare",
     "db:reset": "supabase db reset",
     "db:types": "supabase gen types typescript --local > app/types/database.ts",
-    "og": "node scripts/og-images.mjs"
+    "og": "node scripts/og-images.mjs",
+    "sync:shared": "node scripts/sync-shared.mjs"
   },
   "lint-staged": {
     "{app,server,shared,tests}/**/*.{ts,vue}": "eslint --fix"
