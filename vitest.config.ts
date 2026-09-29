@@ -6,6 +6,8 @@ export default defineVitestConfig({
     globals: true,
     include: ['tests/unit/**/*.test.ts'],
     setupFiles: ['tests/unit/setup.ts'],
+    // happy-dom's Web Animations stub rejects finished promises when motion-v cancels an animation.
+    onUnhandledError: (error) => error.name !== 'AbortError',
     coverage: {
       provider: 'v8',
       reporter: ['text-summary', 'html'],

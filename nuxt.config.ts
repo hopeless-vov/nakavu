@@ -2,6 +2,7 @@ import tailwindcss from '@tailwindcss/vite'
 import { fileURLToPath } from 'node:url'
 
 import { routes } from './app/router/routes'
+import { themeBootScript } from './app/utils/theme'
 
 const siteUrl = process.env.NUXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
 
@@ -39,6 +40,7 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: 'uk' },
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
       meta: [{ name: 'theme-color', content: '#FAF5EC' }],
+      script: [{ innerHTML: themeBootScript, tagPosition: 'head' }],
     },
   },
 
