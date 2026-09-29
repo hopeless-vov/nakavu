@@ -68,6 +68,10 @@
     "history": {
       "title": "Geschiedenis",
       "description": "Al je koffiematches."
+    },
+    "admin": {
+      "title": "Beheeroverzicht",
+      "description": "Statistieken en leden van de workspace."
     }
   },
   "common": {
@@ -839,6 +843,56 @@
     "empty": {
       "title": "Nog niets",
       "body": "Na je eerste ronde staan al je matches hier — en kun je aangeven of jullie hebben afgesproken."
+    }
+  },
+  "admin": {
+    "eyebrow": "Beheeroverzicht",
+    "forbidden": "Deze pagina is alleen voor workspace-admins.",
+    "retry": "Opnieuw proberen",
+    "tabs": {
+      "label": "Onderdelen",
+      "overview": "Overzicht",
+      "members": "Leden",
+      "settings": "Instellingen"
+    },
+    "stats": {
+      "members": "Leden",
+      "active": "Doen mee",
+      "away": "Gepauzeerd of slaan over",
+      "awayHint": "pauze: {paused} · overslaan: {skipping}",
+      "met": "Afgesproken in {month}",
+      "metNone": "Nog geen rondes"
+    },
+    "chart": {
+      "title": "Deelname",
+      "subtitle": "Aandeel deelnemers dat “Ja, we hebben afgesproken” antwoordde, over de laatste zes rondes.",
+      "detail": "{met} van {total} afgesproken",
+      "empty": "De grafiek verschijnt na de eerste ronde."
+    },
+    "members": {
+      "search": "Zoek op naam, rol, team of e-mail",
+      "you": "(jij)",
+      "actions": "Acties voor {name}",
+      "makeAdmin": "Admin maken",
+      "makeMember": "Lid maken",
+      "remove": "Uit workspace verwijderen",
+      "showing": "{shown} van {total} getoond",
+      "more": "Meer tonen"
+    },
+    "delete": {
+      "title": "Workspace verwijderen",
+      "body": "Alle leden, rondes en geschiedenis worden definitief verwijderd.",
+      "button": "Verwijderen",
+      "confirmTitle": "{name} verwijderen?",
+      "confirmBody": "Dit kan niet ongedaan worden gemaakt. Typ “{name}” om te bevestigen.",
+      "typeName": "Naam van de workspace",
+      "confirm": "Definitief verwijderen"
+    },
+    "toast": {
+      "role": "Rol gewijzigd: {role}.",
+      "removed": "Lid verwijderd.",
+      "deleted": "{name} verwijderd.",
+      "saved": "Instellingen opgeslagen."
     }
   }
 }

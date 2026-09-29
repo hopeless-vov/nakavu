@@ -68,6 +68,10 @@
     "history": {
       "title": "History",
       "description": "All your coffee matches."
+    },
+    "admin": {
+      "title": "Admin overview",
+      "description": "Workspace stats and members."
     }
   },
   "common": {
@@ -839,6 +843,56 @@
     "empty": {
       "title": "Nothing here yet",
       "body": "After your first round, every match shows up here — and you can mark whether you met."
+    }
+  },
+  "admin": {
+    "eyebrow": "Admin overview",
+    "forbidden": "This page is for workspace admins only.",
+    "retry": "Try again",
+    "tabs": {
+      "label": "Sections",
+      "overview": "Overview",
+      "members": "Members",
+      "settings": "Settings"
+    },
+    "stats": {
+      "members": "Members",
+      "active": "In the draw",
+      "away": "Paused or skipping",
+      "awayHint": "paused: {paused} · skipping: {skipping}",
+      "met": "Met in {month}",
+      "metNone": "No rounds yet"
+    },
+    "chart": {
+      "title": "Participation",
+      "subtitle": "Share of participants who answered “Yes, we met”, over the last six rounds.",
+      "detail": "{met} of {total} met",
+      "empty": "The chart appears after the first round."
+    },
+    "members": {
+      "search": "Search name, role, team or email",
+      "you": "(you)",
+      "actions": "Actions for {name}",
+      "makeAdmin": "Make admin",
+      "makeMember": "Make member",
+      "remove": "Remove from workspace",
+      "showing": "Showing {shown} of {total}",
+      "more": "Show more"
+    },
+    "delete": {
+      "title": "Delete workspace",
+      "body": "All members, rounds and history are removed for good.",
+      "button": "Delete",
+      "confirmTitle": "Delete {name}?",
+      "confirmBody": "This can’t be undone. Type “{name}” to confirm.",
+      "typeName": "Workspace name",
+      "confirm": "Delete forever"
+    },
+    "toast": {
+      "role": "Role changed: {role}.",
+      "removed": "Member removed.",
+      "deleted": "{name} deleted.",
+      "saved": "Settings saved."
     }
   }
 }

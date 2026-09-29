@@ -73,7 +73,7 @@ export default tseslint.config(
       'unused-imports/no-unused-imports': 'error',
 
       // i18n — every user-visible string comes from i18n/locales/*.json
-      '@intlify/vue-i18n/no-raw-text': ['error', { ignorePattern: '^[-–—·×✓+/:.,!?()\\s\\d%@→←…]+$' }],
+      '@intlify/vue-i18n/no-raw-text': ['error', { ignorePattern: '^[-–—·×✓+/:.,!?()\\s\\d%@→←…⋯]+$' }],
       '@intlify/vue-i18n/no-missing-keys': 'error',
     },
   },
