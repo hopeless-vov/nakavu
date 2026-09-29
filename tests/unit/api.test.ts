@@ -206,6 +206,15 @@ describe('workspaces api', () => {
     expect((await workspaces.getWorkspaceStats('w1')).rounds).toEqual([])
   })
 
+  it('lists coworker names for the reveal', async () => {
+    db.queue({ data: [{ profiles: { first_name: 'Ann', last_name: 'Lee' } }, { profiles: { first_name: '', last_name: '' } }] })
+    expect(await workspaces.listCoworkerNames('w1', 5)).toEqual(['Ann Lee'])
+    expect(db.calls).toContainEqual(['limit', 5])
+    db.queue({ data: [] })
+    await workspaces.listCoworkerNames('w1')
+    expect(db.calls).toContainEqual(['limit', 12])
+  })
+
   it('surfaces database errors', async () => {
     db.queue({ error: fail })
     await expect(workspaces.joinWorkspace('t')).rejects.toMatchObject({ code: '42501', hint: 'acme.com' })

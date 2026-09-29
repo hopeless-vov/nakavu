@@ -92,3 +92,11 @@ export async function getWorkspaceStats(workspaceId: string): Promise<WorkspaceS
   const rows = unwrap(await supabase().rpc('workspace_stats', { p_workspace: workspaceId }))
   return toWorkspaceStats(rows[0]!)
 }
+
+/** A few coworkers' names for the match-reveal shuffle. */
+export async function listCoworkerNames(workspaceId: string, limit = 12): Promise<string[]> {
+  const rows = unwrap(
+    await supabase().from('memberships').select('profiles!inner(first_name, last_name)').eq('workspace_id', workspaceId).limit(limit),
+  ) as unknown as { profiles: { first_name: string; last_name: string } }[]
+  return rows.map((r) => `${r.profiles.first_name} ${r.profiles.last_name}`.trim()).filter(Boolean)
+}

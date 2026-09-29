@@ -1,5 +1,5 @@
 <script setup lang="ts">
-export type PillTone = 'sage' | 'accent' | 'neutral' | 'ink'
+import type { PillTone } from '~/types/ui'
 
 withDefaults(defineProps<{ tone?: PillTone; dot?: boolean }>(), { tone: 'neutral' })
 

@@ -44,6 +44,10 @@
     "onboarding": {
       "title": "Tell us about you",
       "description": "Fill in your Nakavu profile."
+    },
+    "dashboard": {
+      "title": "Home",
+      "description": "Your coffee match and the next round."
     }
   },
   "common": {
@@ -578,5 +582,97 @@
       "newWorkspace": "Create a workspace",
       "signOut": "Sign out"
     }
+  },
+  "dashboard": {
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
+    },
+    "subtitle": {
+      "matched": "This month’s coffee is on. Here’s who you’re meeting.",
+      "waiting": "The next round is on {when}. We’ll email you as soon as you have a match.",
+      "paused": "You’re paused in every workspace. Switch matching on to join the draw.",
+      "empty": "Create a workspace, or ask a colleague for an invite link."
+    },
+    "empty": {
+      "title": "No workspaces yet",
+      "body": "A workspace is a group we shuffle: a company, an office, a club or friends. Create one, or open an invite link from a colleague.",
+      "create": "Create a workspace"
+    },
+    "waiting": {
+      "title": "No match yet — that’s fine",
+      "body": "On round day we shuffle everyone and email you. Meanwhile, fill in your profile so your match knows what to talk to you about.",
+      "profile": "Complete my profile"
+    },
+    "next": {
+      "title": "Next match in",
+      "days": "days",
+      "hours": "hours",
+      "minutes": "min",
+      "seconds": "sec",
+      "when": "{when} · {workspace}.",
+      "status": {
+        "draw": "You’re in the draw.",
+        "skipping": "You’re skipping this one.",
+        "paused": "You’re paused."
+      }
+    },
+    "workspaces": "Your workspaces",
+    "createWorkspace": "+ Create a workspace"
+  },
+  "match": {
+    "title": "Your {month} match",
+    "revealing": "Spinning the roulette…",
+    "starters": "Conversation starters",
+    "emailButton": "Email {names}",
+    "email": {
+      "subject": "Coffee this month?",
+      "body": "Hi {names},\n\nNakavu paired us for coffee. How about 30 minutes next week — Tuesday or Wednesday?\n\n{me}"
+    },
+    "calendar": {
+      "button": "Add to calendar",
+      "title": "Coffee with {names}",
+      "description": "Your Nakavu match ({workspace}). Move it to a time that suits you both.",
+      "toast": "Calendar event downloaded. Agree on a time with {names}."
+    },
+    "feedback": {
+      "label": "Did you meet?",
+      "met": "Yes",
+      "not_yet": "Not yet",
+      "skipped": "Didn’t happen",
+      "toast": {
+        "met": "Lovely! Thanks for letting us know.",
+        "not_yet": "Okay, we’ll check back later.",
+        "skipped": "It happens. Next time!"
+      }
+    }
+  },
+  "workspace": {
+    "meta": "{count} member · {role} | {count} members · {role}",
+    "role": {
+      "owner": "Owner",
+      "admin": "Admin",
+      "member": "Member"
+    },
+    "status": {
+      "draw": "In the draw",
+      "skipping": "Skipping",
+      "paused": "Paused"
+    }
+  },
+  "starters": {
+    "sharedInterest": "You both picked “{interest}”. How did you get into it?",
+    "theirTeam": "What does a normal Tuesday look like in {department}?",
+    "generic": [
+      "What’s the best work advice you’ve ever had?",
+      "What are you enjoying working on right now?",
+      "Which place in town do you recommend to everyone?",
+      "What have you learned to do in the past year?",
+      "What’s your perfect coffee — and where do you drink it?",
+      "Which book or podcast changed your mind about something?",
+      "What did you want to be as a kid?",
+      "What would you do with a free Friday?"
+    ]
   }
 }

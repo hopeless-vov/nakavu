@@ -1,6 +1,8 @@
-import en from '../../i18n/locales/en.json'
-import nl from '../../i18n/locales/nl.json'
-import uk from '../../i18n/locales/uk.json'
+import { readFileSync } from 'node:fs'
+
+// Read raw JSON: importing it would go through the i18n compiler plugin.
+const read = (code: string) => JSON.parse(readFileSync(`i18n/locales/${code}.json`, 'utf8'))
+const [uk, en, nl] = ['uk', 'en', 'nl'].map(read)
 
 type Tree = { [key: string]: string | Tree }
 
@@ -12,7 +14,8 @@ function flatten(tree: Tree, prefix = ''): Record<string, string> {
 }
 
 const locales = { uk: flatten(uk as Tree), en: flatten(en as Tree), nl: flatten(nl as Tree) }
-const placeholders = (s: string) => [...s.matchAll(/\{(\w+)\}/g)].map((m) => m[1]).sort()
+// A set, not a list: plural forms repeat placeholders a different number of times per language.
+const placeholders = (s: string) => [...new Set([...s.matchAll(/\{(\w+)\}/g)].map((m) => m[1]))].sort()
 
 describe('locale files', () => {
   it('have exactly the same keys in uk, en and nl', () => {

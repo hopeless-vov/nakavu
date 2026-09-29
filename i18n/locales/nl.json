@@ -44,6 +44,10 @@
     "onboarding": {
       "title": "Vertel over jezelf",
       "description": "Vul je Nakavu-profiel in."
+    },
+    "dashboard": {
+      "title": "Home",
+      "description": "Je koffiematch en de volgende ronde."
     }
   },
   "common": {
@@ -578,5 +582,97 @@
       "newWorkspace": "Workspace maken",
       "signOut": "Uitloggen"
     }
+  },
+  "dashboard": {
+    "greeting": {
+      "morning": "Goedemorgen, {name}",
+      "afternoon": "Goedemiddag, {name}",
+      "evening": "Goedenavond, {name}"
+    },
+    "subtitle": {
+      "matched": "De koffie van deze maand staat klaar. Hier is je match.",
+      "waiting": "De volgende ronde is op {when}. We mailen je zodra je een match hebt.",
+      "paused": "Je pauzeert in alle workspaces. Zet matchen aan om mee te doen.",
+      "empty": "Maak een workspace of vraag een collega om een uitnodigingslink."
+    },
+    "empty": {
+      "title": "Nog geen workspaces",
+      "body": "Een workspace is een groep die we husselen: een bedrijf, een kantoor, een club of vrienden. Maak er een, of open een uitnodigingslink van een collega.",
+      "create": "Workspace maken"
+    },
+    "waiting": {
+      "title": "Nog geen match — dat is prima",
+      "body": "Op de rondedag husselen we iedereen en mailen we je. Vul intussen je profiel aan, zodat je match weet waarover jullie kunnen praten.",
+      "profile": "Profiel aanvullen"
+    },
+    "next": {
+      "title": "Volgende match over",
+      "days": "dagen",
+      "hours": "uur",
+      "minutes": "min",
+      "seconds": "sec",
+      "when": "{when} · {workspace}.",
+      "status": {
+        "draw": "Je doet mee.",
+        "skipping": "Je slaat deze ronde over.",
+        "paused": "Je pauzeert."
+      }
+    },
+    "workspaces": "Jouw workspaces",
+    "createWorkspace": "+ Workspace maken"
+  },
+  "match": {
+    "title": "Je match voor {month}",
+    "revealing": "De roulette draait…",
+    "starters": "Gespreksstarters",
+    "emailButton": "Mail {names}",
+    "email": {
+      "subject": "Koffie deze maand?",
+      "body": "Hoi {names},\n\nNakavu heeft ons gekoppeld voor koffie. Zullen we volgende week een half uur afspreken — dinsdag of woensdag?\n\n{me}"
+    },
+    "calendar": {
+      "button": "Toevoegen aan agenda",
+      "title": "Koffie met {names}",
+      "description": "Je Nakavu-match ({workspace}). Verplaats naar een tijd die jullie allebei past.",
+      "toast": "Agenda-item gedownload. Spreek een tijd af met {names}."
+    },
+    "feedback": {
+      "label": "Hebben jullie afgesproken?",
+      "met": "Ja",
+      "not_yet": "Nog niet",
+      "skipped": "Ging niet door",
+      "toast": {
+        "met": "Leuk! Bedankt dat je het laat weten.",
+        "not_yet": "Oké, we vragen het later nog eens.",
+        "skipped": "Kan gebeuren. Volgende keer!"
+      }
+    }
+  },
+  "workspace": {
+    "meta": "{count} lid · {role} | {count} leden · {role}",
+    "role": {
+      "owner": "Eigenaar",
+      "admin": "Admin",
+      "member": "Lid"
+    },
+    "status": {
+      "draw": "Doet mee",
+      "skipping": "Slaat over",
+      "paused": "Gepauzeerd"
+    }
+  },
+  "starters": {
+    "sharedInterest": "Jullie kozen allebei “{interest}”. Hoe ben je daarin gerold?",
+    "theirTeam": "Hoe ziet een gewone dinsdag eruit bij {department}?",
+    "generic": [
+      "Wat is het beste werkadvies dat je ooit kreeg?",
+      "Waar werk je nu met plezier aan?",
+      "Welke plek in de stad raad je iedereen aan?",
+      "Wat heb je het afgelopen jaar geleerd?",
+      "Wat is jouw perfecte koffie — en waar drink je die?",
+      "Welk boek of welke podcast veranderde je kijk op iets?",
+      "Wat wilde je vroeger worden?",
+      "Wat zou je doen met een vrije vrijdag?"
+    ]
   }
 }
