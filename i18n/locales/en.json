@@ -60,6 +60,10 @@
     "join": {
       "title": "You’re invited to Nakavu",
       "description": "You’ve been invited to a coffee roulette."
+    },
+    "workspaces": {
+      "title": "Workspaces",
+      "description": "Manage your workspace participation."
     }
   },
   "common": {
@@ -788,5 +792,38 @@
     "note": "Once a round we’ll introduce you to someone for coffee. You can skip any time.",
     "missingTitle": "Invite not found",
     "missingBody": "The link may have been replaced. Ask whoever invited you for a fresh one."
+  },
+  "settings": {
+    "title": "Workspaces",
+    "subtitle": "Each workspace has its own schedule. Take a break whenever you like.",
+    "pick": "Choose a workspace",
+    "include": {
+      "title": "Include me in matching",
+      "body": "When this is off, you stay in the workspace but won’t be matched until you turn it back on."
+    },
+    "skip": {
+      "title": "Skip next round",
+      "off": "Busy stretch? Sit out the round on {next} and come back automatically after that.",
+      "on": "You won’t be matched on {next}. You’re back in the draw on {back}.",
+      "needsInclude": "Turn matching on first."
+    },
+    "invite": "Invite people",
+    "admin": "Admin overview",
+    "leave": {
+      "title": "Leave workspace",
+      "body": "Your match history here will be removed. You can rejoin with a new invite.",
+      "button": "Leave {name}",
+      "confirmTitle": "Leave {name}?",
+      "confirmBody": "You won’t be matched here anymore and your history in this workspace goes with you. If you just need a break, skip the next round instead.",
+      "stay": "Stay",
+      "confirm": "Leave workspace"
+    },
+    "toast": {
+      "paused": "Paused. You won’t be matched in {name}.",
+      "resumed": "You’re back in the draw for {name}.",
+      "skipping": "Skipping. See you on {date}!",
+      "notSkipping": "You’re in for {date}.",
+      "left": "You left {name}."
+    }
   }
 }

@@ -60,6 +60,10 @@
     "join": {
       "title": "Uitgenodigd voor Nakavu",
       "description": "Je bent uitgenodigd voor een koffieroulette."
+    },
+    "workspaces": {
+      "title": "Workspaces",
+      "description": "Beheer je deelname aan workspaces."
     }
   },
   "common": {
@@ -788,5 +792,38 @@
     "note": "Eén keer per ronde stellen we je voor aan iemand voor koffie. Je kunt altijd overslaan.",
     "missingTitle": "Uitnodiging niet gevonden",
     "missingBody": "De link is misschien vervangen. Vraag degene die je uitnodigde om een nieuwe."
+  },
+  "settings": {
+    "title": "Workspaces",
+    "subtitle": "Elke workspace heeft een eigen schema. Neem pauze wanneer je wilt.",
+    "pick": "Kies een workspace",
+    "include": {
+      "title": "Meedoen met matchen",
+      "body": "Staat dit uit, dan blijf je in de workspace maar krijg je geen match tot je het weer aanzet."
+    },
+    "skip": {
+      "title": "Volgende ronde overslaan",
+      "off": "Drukke periode? Sla de ronde van {next} over en doe daarna automatisch weer mee.",
+      "on": "Je krijgt geen match op {next}. Je doet weer mee op {back}.",
+      "needsInclude": "Zet eerst matchen aan."
+    },
+    "invite": "Mensen uitnodigen",
+    "admin": "Beheeroverzicht",
+    "leave": {
+      "title": "Workspace verlaten",
+      "body": "Je matchgeschiedenis hier wordt verwijderd. Met een nieuwe uitnodiging kun je terugkomen.",
+      "button": "{name} verlaten",
+      "confirmTitle": "{name} verlaten?",
+      "confirmBody": "Je wordt hier niet meer gematcht en je geschiedenis in deze workspace verdwijnt. Wil je alleen even pauze? Sla dan de volgende ronde over.",
+      "stay": "Blijven",
+      "confirm": "Workspace verlaten"
+    },
+    "toast": {
+      "paused": "Gepauzeerd. Je wordt niet gematcht in {name}.",
+      "resumed": "Je doet weer mee in {name}.",
+      "skipping": "Overgeslagen. Tot {date}!",
+      "notSkipping": "Je doet mee op {date}.",
+      "left": "Je hebt {name} verlaten."
+    }
   }
 }
