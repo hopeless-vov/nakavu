@@ -22,7 +22,8 @@
     "db:reset": "supabase db reset",
     "db:types": "supabase gen types typescript --local > app/types/database.ts",
     "og": "node scripts/og-images.mjs",
-    "sync:shared": "node scripts/sync-shared.mjs"
+    "sync:shared": "node scripts/sync-shared.mjs",
+    "email:auth": "node scripts/build-auth-templates.ts"
   },
   "lint-staged": {
     "{app,server,shared,tests}/**/*.{ts,vue}": "eslint --fix"

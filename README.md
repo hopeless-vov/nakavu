@@ -142,3 +142,10 @@ Two kinds, both in **uk / en / nl**:
 | `goodbye` | account deleted | `delete_my_account()` |
 
 Templates live in `supabase/functions/_shared/email/` (`strings.ts` copy, `layout.ts` email-safe HTML with a dark-mode variant, `templates.ts` rendering, `outbox.ts` sending + retries up to 5 attempts). Every email has a plain-text part and a `List-Unsubscribe` header pointing at notification settings. Email HTML uses literal hex colours (clients don't support CSS variables) mirroring the theme tokens.
+
+### Supabase Auth templates
+
+`npm run email:auth` generates `supabase/templates/{magic_link,confirmation,invite,email_change,reauthentication}.html` from `supabase/functions/_shared/email/auth-templates.ts` (same layout as transactional mail). Each file contains **uk / en / nl** and chooses by `.Data.locale`, which the app sets at sign-up from the interface language. Links go to `/auth/confirm?…&token_hash=…` (verified only on click — safe from link scanners such as Microsoft Safe Links) and sign-in emails also carry the 6-digit `{{ .Token }}`.
+
+- **Local:** already wired in `supabase/config.toml` (see Mailpit at :55324).
+- **Production:** Dashboard → Authentication → Emails → paste each file and its subject (subjects are trilingual because Supabase subjects aren't per-user). Set *Site URL* to your domain and add `https://<domain>/**` to *Redirect URLs*. Set the OTP expiry to 900 s and enable custom SMTP (e.g. Resend SMTP) for your own sender address.
