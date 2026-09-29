@@ -73,6 +73,9 @@ export default defineNuxtConfig({
     '/onboarding': { ssr: false },
     '/en/onboarding': { ssr: false },
     '/nl/onboarding': { ssr: false },
+    '/auth/**': { ssr: false },
+    '/en/auth/**': { ssr: false },
+    '/nl/auth/**': { ssr: false },
   },
 
   runtimeConfig: {

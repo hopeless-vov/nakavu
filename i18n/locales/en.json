@@ -5,7 +5,18 @@
   },
   "seo": {
     "ogAlt": "Two coffee cups leaning towards each other — Nakavu",
-    "notFound": { "title": "Page not found", "description": "Looks like this cup is empty." }
+    "notFound": {
+      "title": "Page not found",
+      "description": "Looks like this cup is empty."
+    },
+    "signIn": {
+      "title": "Sign in",
+      "description": "Sign in to Nakavu with a link or code from your inbox — no passwords."
+    },
+    "confirm": {
+      "title": "Confirm sign-in",
+      "description": "Confirm your Nakavu sign-in."
+    }
   },
   "common": {
     "close": "Close",
@@ -17,11 +28,70 @@
     "remove": "Remove",
     "somethingWrong": "Something went wrong. Please try again."
   },
-  "theme": { "toggle": "Switch theme", "light": "Light", "dark": "Dark", "system": "System" },
-  "language": { "label": "Language" },
+  "theme": {
+    "toggle": "Switch theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "label": "Language"
+  },
   "notFound": {
     "title": "No coffee here",
     "body": "The page you’re looking for has moved or never existed.",
     "home": "Back home"
+  },
+  "auth": {
+    "signIn": {
+      "title": {
+        "default": "Sign in to Nakavu",
+        "create": "Sign in to create a workspace",
+        "join": "Sign in to join"
+      },
+      "subtitle": "We’ll email you a link and a code. No passwords.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you{'@'}company.com",
+      "emailHint": "For work, use your work email so we can find your workspace.",
+      "send": "Email me a link",
+      "or": "or",
+      "provider": {
+        "azure": "Continue with Microsoft",
+        "google": "Continue with Google"
+      }
+    },
+    "code": {
+      "title": "Check your inbox",
+      "subtitle": "We sent a link and a 6-digit code to {email}. Both work for 15 minutes.",
+      "label": "Code from the email",
+      "submit": "Sign in",
+      "linkHint": "Tap the button in the email or type the code here — whichever is easier.",
+      "resend": "Send again",
+      "resendIn": "Send again in {seconds}s",
+      "changeEmail": "Use a different email"
+    },
+    "confirm": {
+      "title": "Almost there",
+      "subtitle": "Press the button to finish signing in on this browser.",
+      "button": "Sign in to Nakavu",
+      "emailChangeTitle": "New email address",
+      "emailChangeButton": "Confirm new email",
+      "errorTitle": "That link didn’t work",
+      "retry": "Get a new email"
+    }
+  },
+  "errors": {
+    "rateLimit": "Too many attempts. Wait a minute and try again.",
+    "codeExpired": "That code has expired. Send a new email.",
+    "codeInvalid": "That code doesn’t match. Check the digits in the latest email.",
+    "emailInvalid": "Enter a valid email, e.g. olena{'@'}company.com.",
+    "signupDisabled": "Sign-ups are closed right now.",
+    "linkInvalid": "This link has expired or was already used. Send a new email.",
+    "notFound": "We couldn’t find that. The invite may have been revoked.",
+    "forbidden": "You don’t have permission to do that.",
+    "domainNotAllowed": "This workspace is only open to certain email domains.",
+    "transferOwnership": "Hand ownership to someone else first.",
+    "lastOwner": "A workspace needs at least one owner.",
+    "duplicate": "That already exists."
   }
 }

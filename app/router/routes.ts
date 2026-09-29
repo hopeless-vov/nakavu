@@ -12,5 +12,7 @@ export interface AppRoute {
 // onboarded — signed in with a finished profile.
 export const routes: AppRoute[] = [
   { name: 'home', path: '/', view: 'LandingView', meta: { access: 'public', layout: 'site' } },
+  { name: 'sign-in', path: '/sign-in', view: 'SignInView', meta: { access: 'guest', layout: 'bare' } },
+  { name: 'auth-confirm', path: '/auth/confirm', view: 'AuthConfirmView', meta: { access: 'public', layout: 'bare' } },
   { name: 'not-found', path: '/:pathMatch(.*)*', view: 'NotFoundView', meta: { access: 'public', layout: 'site' } },
 ]

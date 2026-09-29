@@ -5,7 +5,18 @@
   },
   "seo": {
     "ogAlt": "Twee koffiekopjes die naar elkaar toe buigen — Nakavu",
-    "notFound": { "title": "Pagina niet gevonden", "description": "Dit kopje lijkt leeg te zijn." }
+    "notFound": {
+      "title": "Pagina niet gevonden",
+      "description": "Dit kopje lijkt leeg te zijn."
+    },
+    "signIn": {
+      "title": "Inloggen",
+      "description": "Log in bij Nakavu met een link of code uit je mailbox — zonder wachtwoord."
+    },
+    "confirm": {
+      "title": "Inloggen bevestigen",
+      "description": "Bevestig je inlog bij Nakavu."
+    }
   },
   "common": {
     "close": "Sluiten",
@@ -17,11 +28,70 @@
     "remove": "Verwijderen",
     "somethingWrong": "Er ging iets mis. Probeer het opnieuw."
   },
-  "theme": { "toggle": "Thema wisselen", "light": "Licht", "dark": "Donker", "system": "Systeem" },
-  "language": { "label": "Taal" },
+  "theme": {
+    "toggle": "Thema wisselen",
+    "light": "Licht",
+    "dark": "Donker",
+    "system": "Systeem"
+  },
+  "language": {
+    "label": "Taal"
+  },
   "notFound": {
     "title": "Hier geen koffie",
     "body": "De pagina die je zoekt is verhuisd of heeft nooit bestaan.",
     "home": "Naar home"
+  },
+  "auth": {
+    "signIn": {
+      "title": {
+        "default": "Inloggen bij Nakavu",
+        "create": "Log in om een workspace te maken",
+        "join": "Log in om mee te doen"
+      },
+      "subtitle": "We mailen je een link en een code. Geen wachtwoorden.",
+      "emailLabel": "E-mail",
+      "emailPlaceholder": "jij{'@'}bedrijf.nl",
+      "emailHint": "Voor werk: gebruik je werkmail, dan vinden we je workspace.",
+      "send": "Mail me een link",
+      "or": "of",
+      "provider": {
+        "azure": "Doorgaan met Microsoft",
+        "google": "Doorgaan met Google"
+      }
+    },
+    "code": {
+      "title": "Check je inbox",
+      "subtitle": "We hebben een link en een 6-cijferige code naar {email} gestuurd. Ze zijn 15 minuten geldig.",
+      "label": "Code uit de e-mail",
+      "submit": "Inloggen",
+      "linkHint": "Klik op de knop in de mail of typ hier de code — wat je het makkelijkst vindt.",
+      "resend": "Opnieuw sturen",
+      "resendIn": "Opnieuw sturen over {seconds}s",
+      "changeEmail": "Ander e-mailadres"
+    },
+    "confirm": {
+      "title": "Bijna klaar",
+      "subtitle": "Druk op de knop om het inloggen in deze browser af te ronden.",
+      "button": "Inloggen bij Nakavu",
+      "emailChangeTitle": "Nieuw e-mailadres",
+      "emailChangeButton": "Nieuw e-mailadres bevestigen",
+      "errorTitle": "Die link werkte niet",
+      "retry": "Nieuwe e-mail ontvangen"
+    }
+  },
+  "errors": {
+    "rateLimit": "Te veel pogingen. Wacht even en probeer het opnieuw.",
+    "codeExpired": "Deze code is verlopen. Vraag een nieuwe e-mail aan.",
+    "codeInvalid": "Deze code klopt niet. Controleer de cijfers in de laatste e-mail.",
+    "emailInvalid": "Vul een geldig e-mailadres in, bijv. olena{'@'}bedrijf.nl.",
+    "signupDisabled": "Aanmelden is op dit moment gesloten.",
+    "linkInvalid": "Deze link is verlopen of al gebruikt. Vraag een nieuwe e-mail aan.",
+    "notFound": "Niet gevonden. Misschien is de uitnodiging ingetrokken.",
+    "forbidden": "Daar heb je geen rechten voor.",
+    "domainNotAllowed": "Deze workspace is alleen open voor bepaalde e-maildomeinen.",
+    "transferOwnership": "Draag het eigenaarschap eerst over aan iemand anders.",
+    "lastOwner": "Een workspace heeft minstens één eigenaar nodig.",
+    "duplicate": "Dat bestaat al."
   }
 }
