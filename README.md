@@ -1,0 +1,79 @@
+# Nakavu ☕
+
+**Nakavu** (від українського «на каву?») — кавова рулетка для команд і друзів. Раз на місяць (або за розкладом, який обрав воркспейс) кожен учасник отримує випадкового співрозмовника на каву — і лист з усім, що потрібно, щоб почати розмову.
+
+- Кілька воркспейсів на одного користувача: робота, офіс, гільдія, друзі.
+- Пари або трійки, розумний підбір: спільна мова обовʼязкова, без повторів, інші відділи, спільні інтереси.
+- Пропуск раунду, пауза, історія зустрічей, статистика для адмінів.
+- Мови інтерфейсу та листів: українська (типово), English, Nederlands.
+
+## Stack
+
+| Layer | Tech |
+|---|---|
+| Framework | Nuxt 4 (Vue 3.5, TypeScript) — SSR/prerender for public pages, client-side app |
+| State | Pinia |
+| Styling | Tailwind CSS 4 with semantic theme tokens (light/dark) |
+| Motion | motion-v |
+| Headless UI | reka-ui |
+| i18n / SEO | @nuxtjs/i18n, @nuxtjs/sitemap, @nuxtjs/robots |
+| Backend | Supabase (Postgres + RLS, Auth, Storage, Edge Functions, pg_cron) |
+| Email | Supabase Auth templates + Resend for transactional mail |
+| Tests | Vitest (+ @nuxt/test-utils, coverage-v8), Playwright, pgTAP |
+| Lint | ESLint (flat config), husky + lint-staged |
+
+## Getting started
+
+```bash
+nvm use            # Node 22+
+npm install
+cp .env.example .env
+npm run dev        # http://localhost:3000
+```
+
+## Scripts
+
+| Script | What it does |
+|---|---|
+| `npm run dev` | Nuxt dev server |
+| `npm run build` / `generate` / `preview` | Production build / static generate / preview |
+| `npm run typecheck` | vue-tsc type check |
+| `npm test` | Vitest in watch mode |
+| `npm run test:unit` | Vitest once |
+| `npm run test:coverage` | Vitest with coverage thresholds |
+| `npm run test:e2e` | Playwright end-to-end tests |
+| `npm run test:db` | pgTAP tests for schema and RLS |
+| `npm run lint` / `lint:fix` | ESLint |
+
+## Environment
+
+| Variable | Purpose |
+|---|---|
+| `NUXT_PUBLIC_SITE_URL` | Canonical site URL (sitemap, hreflang, emails) |
+| `NUXT_PUBLIC_SUPABASE_URL` | Supabase project URL |
+| `NUXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anon key |
+| `NUXT_PUBLIC_AUTH_PROVIDERS` | Optional comma-separated OAuth providers (`azure,google`). Empty = magic link only |
+
+## Project structure
+
+```
+app/
+  api/            typed Supabase data layer (one file per resource)
+  components/ui/  presentational UI kit — props in, events out
+  components/     smart components (stores + composables)
+  composables/    reusable logic
+  layouts/        site / bare / app shells
+  middleware/     route access guards
+  router/         routes.ts — the single route table (route → view)
+  stores/         Pinia stores
+  styles/         main.css — theme tokens
+  utils/          pure helpers
+  views/          one view per route
+i18n/locales/     uk.json (default), en.json, nl.json
+shared/           pure logic shared with Edge Functions (matching, schedules)
+supabase/         migrations, pgTAP tests, Edge Functions, email templates
+tests/unit/       Vitest
+tests/e2e/        Playwright
+```
+
+Architecture and conventions are described in [CLAUDE.md](CLAUDE.md).
