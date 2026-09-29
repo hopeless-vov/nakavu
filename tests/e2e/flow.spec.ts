@@ -1,6 +1,7 @@
 // Full journey against local Supabase (`npm run db:start`) and Mailpit.
 // Run with: E2E_SUPABASE=1 SUPABASE_SERVICE_ROLE_KEY=<secret key from `supabase status`> npm run test:e2e -- flow
-import { type Browser, expect, type Page, test } from '@playwright/test'
+import { expect, hydrateOnNavigation, test } from './fixtures'
+import type { Browser, Page } from '@playwright/test'
 
 const API = process.env.SUPABASE_URL ?? 'http://127.0.0.1:55321'
 const MAILPIT = process.env.MAILPIT_URL ?? 'http://127.0.0.1:55324'
@@ -9,7 +10,7 @@ const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY ?? ''
 test.skip(!process.env.E2E_SUPABASE, 'needs local Supabase + Mailpit (set E2E_SUPABASE=1)')
 test.describe.configure({ mode: 'serial' })
 
-const stamp = Date.now()
+const stamp = `${Date.now()}${Math.floor(Math.random() * 1000)}`
 const owner = `owner.${stamp}@e2e.test`
 const guest = `guest.${stamp}@e2e.test`
 
@@ -37,7 +38,7 @@ async function signIn(page: Page, email: string) {
 
 async function onboard(page: Page, firstName: string) {
   await expect(page).toHaveURL(/\/onboarding/)
-  await page.getByLabel('Ім’я').fill(firstName)
+  await page.getByRole('textbox', { name: 'Ім’я' }).fill(firstName)
   await page.getByRole('button', { name: 'Походи' }).click()
   await page.getByRole('button', { name: 'Готово — до головної' }).click()
 }
@@ -57,7 +58,7 @@ let browserRef: Browser
 
 test('owner signs in with the emailed code, onboards and creates a workspace', async ({ browser }) => {
   browserRef = browser
-  ownerPage = await (await browser.newContext()).newPage()
+  ownerPage = hydrateOnNavigation(await (await browser.newContext()).newPage())
   await ownerPage.goto('/sign-in?next=%2Fapp%2Fworkspaces%2Fnew')
   await signIn(ownerPage, owner)
   await onboard(ownerPage, 'Olena')
@@ -71,7 +72,7 @@ test('owner signs in with the emailed code, onboards and creates a workspace', a
 })
 
 test('a guest joins with the invite link', async () => {
-  const page = await (await browserRef.newContext()).newPage()
+  const page = hydrateOnNavigation(await (await browserRef.newContext()).newPage())
   await page.goto(new URL(inviteLink).pathname)
   await expect(page.getByRole('heading', { name: /Вас запросили до E2E Guild/ })).toBeVisible()
   await page.getByRole('link', { name: 'Увійти й приєднатися' }).click()
@@ -93,9 +94,11 @@ test('a round matches them and the owner sees the reveal, answers and sees stats
   await ownerPage.goto('/app')
   await expect(ownerPage.getByText('Taras').first()).toBeVisible({ timeout: 15_000 })
   await expect(ownerPage.getByText('Ви обоє вказали «Походи»')).toBeVisible()
+  // A long unbroken workspace name must not push the page sideways on phones.
+  expect(await ownerPage.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(0)
   await ownerPage.getByRole('radio', { name: 'Так' }).click()
   await ownerPage.goto('/app/history')
-  await expect(ownerPage.getByRole('radio', { name: /✓ Так/ })).toBeVisible()
+  await expect(ownerPage.getByRole('radio', { name: 'Так' })).toBeChecked()
 
   await ownerPage.goto('/app/workspaces')
   await ownerPage.getByRole('link', { name: 'Адмін-панель' }).click()

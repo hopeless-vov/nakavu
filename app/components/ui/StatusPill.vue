@@ -13,14 +13,14 @@ const toneClass: Record<PillTone, string> = {
 
 <template>
   <span
-    class="inline-flex h-7 items-center gap-1.5 rounded-full px-3 text-[13px] font-semibold whitespace-nowrap"
+    class="inline-flex h-7 max-w-full items-center gap-1.5 rounded-full px-3 text-[13px] font-semibold whitespace-nowrap"
     :class="toneClass[tone]"
   >
     <span
       v-if="dot"
-      class="size-1.5 rounded-full bg-current"
+      class="size-1.5 shrink-0 rounded-full bg-current"
       aria-hidden="true"
     />
-    <slot />
+    <span class="min-w-0 truncate"><slot /></span>
   </span>
 </template>

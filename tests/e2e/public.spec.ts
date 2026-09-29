@@ -1,5 +1,5 @@
+import { expect, test } from './fixtures'
 import AxeBuilder from '@axe-core/playwright'
-import { expect, test } from '@playwright/test'
 
 const pages = ['/', '/for-teams', '/for-friends', '/faq', '/privacy', '/terms', '/sign-in']
 

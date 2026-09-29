@@ -67,6 +67,53 @@ describe('session store', () => {
     expect(store.profile).toEqual(profile)
   })
 
+  it('waits for the profile the auth listener started loading when verifying a code', async () => {
+    vi.mocked(authApi.getSession).mockResolvedValue(null)
+    const store = useSessionStore()
+    await store.init()
+    let resolveProfile!: (p: typeof profile) => void
+    vi.mocked(profilesApi.getProfile).mockReturnValue(new Promise((r) => (resolveProfile = r)))
+    // Supabase emits SIGNED_IN before verifyEmailCode resolves.
+    vi.mocked(authApi.verifyEmailCode).mockImplementation(async () => {
+      emit('SIGNED_IN', session())
+      return session()
+    })
+    const verifying = store.verifyCode('priya@northwind.com', '123456')
+    await Promise.resolve()
+    let done = false
+    void verifying.then(() => (done = true))
+    await new Promise((r) => setTimeout(r, 0))
+    expect(done).toBe(false)
+    resolveProfile(profile)
+    await verifying
+    expect(store.isOnboarded).toBe(true)
+    expect(profilesApi.getProfile).toHaveBeenCalledTimes(1)
+  })
+
+  it('ignores a slow profile load for a user who already signed out', async () => {
+    vi.mocked(authApi.getSession).mockResolvedValue(null)
+    const store = useSessionStore()
+    await store.init()
+    let resolveFirst!: (p: typeof profile) => void
+    vi.mocked(profilesApi.getProfile).mockReturnValueOnce(new Promise((r) => (resolveFirst = r)))
+    emit('SIGNED_IN', session())
+    emit('SIGNED_OUT', null)
+    await vi.waitFor(() => expect(store.isSignedIn).toBe(false))
+    resolveFirst(profile)
+    await new Promise((r) => setTimeout(r, 0))
+    expect(store.profile).toBeNull()
+  })
+
+  it('recovers when loading the profile fails', async () => {
+    vi.mocked(profilesApi.getProfile).mockRejectedValueOnce(new Error('offline'))
+    vi.mocked(authApi.verifyTokenHash).mockResolvedValue(session())
+    const store = useSessionStore()
+    await expect(store.verifyLink('h', 'email')).rejects.toThrow('offline')
+    vi.mocked(authApi.exchangeCode).mockResolvedValue(session('u2'))
+    await store.exchangeOAuthCode('code')
+    expect(store.profile).toEqual(profile)
+  })
+
   it('verifies links, OAuth codes and starts OAuth', async () => {
     const store = useSessionStore()
     vi.mocked(authApi.verifyTokenHash).mockResolvedValue(session())

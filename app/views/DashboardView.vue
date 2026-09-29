@@ -39,7 +39,7 @@ useSeo({ title: 'seo.dashboard.title', description: 'seo.dashboard.description',
 
     <div
       v-if="state === 'loading'"
-      class="grid gap-6 lg:grid-cols-[1fr_340px]"
+      class="grid grid-cols-[minmax(0,1fr)] gap-6 lg:grid-cols-[minmax(0,1fr)_340px]"
       aria-busy="true"
     >
       <div class="h-96 animate-pulse rounded-[28px] bg-surface-2" />
@@ -58,7 +58,7 @@ useSeo({ title: 'seo.dashboard.title', description: 'seo.dashboard.description',
 
     <div
       v-else
-      class="grid items-start gap-6 lg:grid-cols-[1fr_340px]"
+      class="grid grid-cols-[minmax(0,1fr)] items-start gap-6 lg:grid-cols-[minmax(0,1fr)_340px]"
     >
       <div class="flex flex-col gap-6">
         <CurrentMatchCard

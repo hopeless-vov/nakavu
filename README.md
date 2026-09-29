@@ -153,7 +153,9 @@ Templates live in `supabase/functions/_shared/email/` (`strings.ts` copy, `layou
 ## End-to-end tests (Playwright)
 
 - `tests/e2e/public.spec.ts` — public site in three languages, SEO tags (hreflang, OG, JSON-LD), real 404, language switcher, mobile menu, theme persistence, sign-in validation, route guard, and **axe WCAG 2 AA checks on every public page in light and dark mode**. Runs on desktop and a Pixel 7 profile.
-- `tests/e2e/flow.spec.ts` — the whole journey against local Supabase: sign in with the code from Mailpit → onboarding → create workspace → guest joins via the invite link → a round → match reveal → "Yes, we met" → history → admin. Needs `E2E_SUPABASE=1` and `SUPABASE_SERVICE_ROLE_KEY` (from `supabase status`).
+- `tests/e2e/flow.spec.ts` — the whole journey against local Supabase: sign in with the code from Mailpit → onboarding → create workspace → guest joins via the invite link → a round → match reveal → "Yes, we met" → history → admin. Needs `E2E_SUPABASE=1` and `SUPABASE_SERVICE_ROLE_KEY` (from `supabase status`). Also asserts the dashboard never scrolls sideways on phones.
+- `tests/e2e/fixtures.ts` — `test`/`expect` to import in specs: every `page.goto` waits until Nuxt has hydrated, so clicks never land on inert SSR markup.
+- Tests run against the **production build** (`nuxt build` + `node .output/server/index.mjs` on :3100, reading `.env`), like Vercel serves it — no Vite reloads or devtools overlay. Set `E2E_DEV=1` to run against `nuxt dev` for quicker iteration. Locally an already running server on :3100 is reused, so restart it after code changes.
 
 ```bash
 npx playwright install chromium

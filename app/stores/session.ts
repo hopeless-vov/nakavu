@@ -21,14 +21,33 @@ export const useSessionStore = defineStore('session', () => {
   const isSignedIn = computed(() => !!session.value)
   const isOnboarded = computed(() => !!profile.value?.onboardedAt)
 
+  let profileLoad: Promise<void> | null = null
+
   async function loadProfile() {
-    profile.value = userId.value ? await profilesApi.getProfile(userId.value) : null
+    const id = userId.value
+    const next = id ? await profilesApi.getProfile(id) : null
+    // A slower load for a previous user must not overwrite the current one.
+    if (id === userId.value) profile.value = next
   }
 
+  /**
+   * Supabase fires `onAuthChange` while `verifyCode` is still awaiting, so both
+   * paths apply the same session. Whoever arrives second must still wait for the
+   * profile the first one started loading, or guards see "not onboarded".
+   */
   async function applySession(next: Session | null) {
     const changedUser = next?.user.id !== session.value?.user.id
     session.value = next
-    if (changedUser) await loadProfile()
+    if (changedUser) {
+      const load = loadProfile()
+      profileLoad = load
+      load
+        .finally(() => {
+          if (profileLoad === load) profileLoad = null
+        })
+        .catch(() => undefined)
+    }
+    await profileLoad
   }
 
   /** Reads the stored session once and keeps it in sync with Supabase. */

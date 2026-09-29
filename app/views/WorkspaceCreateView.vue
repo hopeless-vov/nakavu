@@ -36,7 +36,7 @@ useSeo({ title: 'seo.createWorkspace.title', description: 'seo.createWorkspace.d
       :subtitle="t('workspaceForm.createSubtitle')"
     />
     <form
-      class="grid items-start gap-8 lg:grid-cols-[1fr_340px]"
+      class="grid grid-cols-[minmax(0,1fr)] items-start gap-8 lg:grid-cols-[minmax(0,1fr)_340px]"
       novalidate
       @submit.prevent="submit"
     >

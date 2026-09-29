@@ -34,7 +34,7 @@ useSeo({ title: 'seo.onboarding.title', description: 'seo.onboarding.description
       :title="t('onboarding.title')"
       :subtitle="t('onboarding.subtitle')"
     />
-    <div class="grid items-start gap-8 lg:grid-cols-[1fr_380px]">
+    <div class="grid grid-cols-[minmax(0,1fr)] items-start gap-8 lg:grid-cols-[minmax(0,1fr)_380px]">
       <form
         novalidate
         @submit.prevent="finish"
