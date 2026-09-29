@@ -44,6 +44,8 @@ npm run dev        # http://localhost:3000
 | `npm run test:e2e` | Playwright end-to-end tests |
 | `npm run test:db` | pgTAP tests for schema and RLS |
 | `npm run lint` / `lint:fix` | ESLint |
+| `npm run og` | Re-render Open Graph images (`public/og/{uk,en,nl}.png`) from the hero copy |
+| `npm run db:start` / `db:reset` / `db:types` | Local Supabase, reset, regenerate DB types |
 
 ## Environment
 
@@ -77,6 +79,12 @@ tests/e2e/        Playwright
 ```
 
 Architecture and conventions are described in [CLAUDE.md](CLAUDE.md).
+
+## Pages
+
+Public (prerendered per locale): `/` landing, `/for-teams`, `/for-friends`, `/faq` (FAQPage JSON-LD), `/privacy`, `/terms`. Auth: `/sign-in`, `/auth/confirm`. App: `/onboarding`, `/app/**` (client-rendered, not indexed).
+
+Above-the-fold hero animations are CSS keyframes (`animate-rise`, `animate-pop`) so content is visible before hydration (LCP/SEO); scroll reveals and micro-interactions use motion-v.
 
 ## i18n & SEO
 

@@ -16,6 +16,30 @@
     "confirm": {
       "title": "Confirm sign-in",
       "description": "Confirm your Nakavu sign-in."
+    },
+    "home": {
+      "title": "Coffee roulette for teams and friends",
+      "description": "Once a month (or on your own rhythm) Nakavu pairs you with a random colleague or friend for coffee. Smart matching, conversation starters, three languages."
+    },
+    "teams": {
+      "title": "Nakavu for teams",
+      "description": "Coffee roulette for companies and offices: people from different teams meet over coffee every month. Set up in a minute, no integrations."
+    },
+    "friends": {
+      "title": "Nakavu for friends",
+      "description": "Big friend group, club or community? Nakavu picks who has coffee with whom every month, so nobody drifts away."
+    },
+    "faq": {
+      "title": "Questions and answers",
+      "description": "How Nakavu matches people, what others can see, how to skip a round, and how we handle privacy."
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "description": "What data Nakavu collects, why, and how we protect it."
+    },
+    "terms": {
+      "title": "Terms of use",
+      "description": "The rules for using Nakavu."
     }
   },
   "common": {
@@ -93,5 +117,334 @@
     "transferOwnership": "Hand ownership to someone else first.",
     "lastOwner": "A workspace needs at least one owner.",
     "duplicate": "That already exists."
+  },
+  "site": {
+    "nav": {
+      "label": "Main navigation",
+      "teams": "For teams",
+      "friends": "For friends",
+      "faq": "FAQ",
+      "menu": "Menu"
+    },
+    "signIn": "Sign in",
+    "openApp": "Open Nakavu",
+    "createWorkspace": "Create a workspace",
+    "footer": {
+      "blurb": "Coffee roulette for people who work in very large buildings — or simply haven’t seen each other in a while.",
+      "product": "Product",
+      "company": "Legal",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "copyright": "© {year} Nakavu. Made with love for coffee and people."
+    },
+    "start": "Start"
+  },
+  "person": {
+    "askMeAbout": "Ask me about…"
+  },
+  "landing": {
+    "hero": {
+      "eyebrow": "New matches every month",
+      "title": "Meet the people you’d {never} bump into in the hallway.",
+      "never": "never",
+      "subtitle": "Once a month, Nakavu pairs you with someone from another corner of the company — or a friend you haven’t seen in ages. Thirty minutes of coffee. You pick the time and place.",
+      "create": "Create a workspace",
+      "join": "I have an invite",
+      "note": "Free. No passwords. In Ukrainian, English and Dutch."
+    },
+    "reel": {
+      "0": {
+        "a": "Priya Raman",
+        "aTeam": "Payments",
+        "b": "Tomás Herrera",
+        "bTeam": "Risk",
+        "caption": "Payments meets Risk"
+      },
+      "1": {
+        "a": "Olena Koval",
+        "aTeam": "Design",
+        "b": "Kenji Watanabe",
+        "bTeam": "Finance",
+        "caption": "Design × Finance: someone learns Excel"
+      },
+      "2": {
+        "a": "Sem de Vries",
+        "aTeam": "Legal",
+        "b": "Amara Nwosu",
+        "bTeam": "Research",
+        "caption": "Both bake sourdough"
+      },
+      "3": {
+        "a": "Marta Shevchuk",
+        "aTeam": "Book club",
+        "b": "Daniel Okoye",
+        "bTeam": "Book club",
+        "caption": "Friends who haven’t had coffee in ages"
+      }
+    },
+    "for": {
+      "label": "For",
+      "items": [
+        "companies",
+        "offices",
+        "guilds and communities",
+        "groups of friends"
+      ]
+    },
+    "how": {
+      "eyebrow": "How it works",
+      "title": "Three steps, one of which is drinking coffee.",
+      "subtitle": "No calendar integrations, no chat, no app to install.",
+      "steps": [
+        {
+          "title": "Create a workspace",
+          "body": "A name, a schedule and an invite link. One minute later you can invite colleagues or friends."
+        },
+        {
+          "title": "Get your match",
+          "body": "On round day we shuffle everyone and email you who you’re meeting, what you have in common and how to start."
+        },
+        {
+          "title": "Have a coffee",
+          "body": "Find 30 minutes — at the office, in a café or on video. The rest is just talking."
+        }
+      ]
+    },
+    "features": {
+      "eyebrow": "Thought through",
+      "title": "Random — but not careless.",
+      "items": {
+        "smart": {
+          "title": "Smart matching",
+          "body": "A shared language is required. No repeats with recent matches, a bonus for shared interests, and other teams come first."
+        },
+        "rhythm": {
+          "title": "Your rhythm",
+          "body": "Weekly, every two weeks, monthly, every two months or quarterly. In your time zone."
+        },
+        "skip": {
+          "title": "Skip when you’re busy",
+          "body": "One click and you sit out the next round. Or pause until you’re back."
+        },
+        "many": {
+          "title": "Several workspaces",
+          "body": "Work, office, club, friends — each with its own schedule and people. One account."
+        },
+        "starters": {
+          "title": "Conversation starters",
+          "body": "No awkward first five minutes: shared interests and a few questions in every email."
+        },
+        "private": {
+          "title": "Nothing extra",
+          "body": "We never read calendars or mail. Only the profile you fill in, and only for people in your workspace."
+        }
+      }
+    },
+    "audience": {
+      "teams": {
+        "eyebrow": "For teams",
+        "title": "Break down silos over coffee.",
+        "body": "New joiners find their people, teams get to know each other, and remote colleagues finally get a face.",
+        "cta": "Nakavu for teams"
+      },
+      "friends": {
+        "eyebrow": "For friends",
+        "title": "A big group — with nobody left out.",
+        "body": "Clubs, alumni, friends of friends: every month everyone has coffee with someone they haven’t talked to in a while.",
+        "cta": "Nakavu for friends"
+      }
+    },
+    "cta": {
+      "title": "Your next coffee is waiting.",
+      "body": "Create a workspace, share the link — the first round starts on your schedule."
+    }
+  },
+  "audience": {
+    "teams": {
+      "eyebrow": "For companies, offices and guilds",
+      "title": "Your colleagues are the most interesting people you haven’t met yet.",
+      "subtitle": "Every month Nakavu introduces people from different teams for a 30-minute coffee. New joiners settle in faster, teams understand each other better, and remote colleagues stop being just avatars.",
+      "cta": "Create a team workspace",
+      "card": {
+        "eyebrow": "Your October match",
+        "name": "Tomás Herrera",
+        "role": "Data Engineer, Risk",
+        "fact1": "Lisbon",
+        "fact2": "In person or online",
+        "ask": "how to spot fraud from a single croissant order",
+        "shared": "Sourdough",
+        "other": "Jazz"
+      },
+      "why": "Why teams like it",
+      "points": [
+        {
+          "title": "Set up in a minute",
+          "body": "No HR or calendar integrations. An invite link and, if you like, an email-domain restriction."
+        },
+        {
+          "title": "Across teams first",
+          "body": "The algorithm avoids same-department pairs and people who met recently."
+        },
+        {
+          "title": "Stats for admins",
+          "body": "How many people take part, who is paused, and what share of matches actually met — per round."
+        },
+        {
+          "title": "Respects busy weeks",
+          "body": "Anyone can skip a round or pause. No nagging reminders."
+        }
+      ],
+      "closing": "Your first round can be this month."
+    },
+    "friends": {
+      "eyebrow": "For friends, clubs and communities",
+      "title": "Keep a big group feeling small.",
+      "subtitle": "When you have more friends than free evenings, someone always drifts away. Nakavu picks the pairs every month — all you do is show up for coffee.",
+      "cta": "Create a workspace for friends",
+      "card": {
+        "eyebrow": "Your October match",
+        "name": "Marta Shevchuk",
+        "role": "Half-past-seven book club",
+        "fact1": "Kyiv",
+        "fact2": "Prefers in person",
+        "ask": "why I’ve read the same novel three times",
+        "shared": "Hiking",
+        "other": "Photography"
+      },
+      "why": "Why it works for friends",
+      "points": [
+        {
+          "title": "No more “we should meet up”",
+          "body": "The pair is already picked. Just send a message and find a time."
+        },
+        {
+          "title": "Your rhythm",
+          "body": "Weekly for a close circle, quarterly for alumni — whatever fits."
+        },
+        {
+          "title": "Trios are fine too",
+          "body": "Choose groups of three for people who prefer it."
+        },
+        {
+          "title": "Any city",
+          "body": "In person or online — everyone picks their format and we take it into account."
+        }
+      ],
+      "closing": "Invite everyone with one link."
+    }
+  },
+  "faq": {
+    "title": "Questions and answers",
+    "subtitle": "Can’t find your answer? Write to us — we reply to people, not tickets.",
+    "more": "All questions",
+    "items": [
+      {
+        "q": "How does Nakavu pick matches?",
+        "a": "Randomly, with rules. A pair must share a language. We avoid people who met recently, prefer different departments in work workspaces, take the meeting format (in person or online) into account, and give a bonus for shared interests."
+      },
+      {
+        "q": "When do matches arrive?",
+        "a": "On the day and hour your workspace admin chose, in the workspace time zone — for example on the 1st of every month at 9:00. You get an email and see your match on your home screen."
+      },
+      {
+        "q": "What does my match see?",
+        "a": "Only what you put in your profile: name, job title, city, format, languages, interests and “ask me about…”. Only people in your workspaces can see your email."
+      },
+      {
+        "q": "Can I skip a month?",
+        "a": "Yes. Workspace settings have “Skip next round” — you’re back in automatically afterwards. Or pause until you switch it back on."
+      },
+      {
+        "q": "What if there’s an odd number of people?",
+        "a": "Someone joins a group of three. If someone has no compatible match at all (for example, no shared language), we’ll tell them honestly that there’s no match this time."
+      },
+      {
+        "q": "Can I be in several workspaces?",
+        "a": "Yes: work, office, club, friends. Each has its own schedule, and you manage your participation separately."
+      },
+      {
+        "q": "How do I keep a workspace to my company?",
+        "a": "When creating it, add allowed email domains, e.g. company.com. The invite link then only works for those addresses; personal invites work for anyone."
+      },
+      {
+        "q": "Why no password?",
+        "a": "We email you a button and a 6-digit code. The code saves the day when a corporate mail filter “checks” the link before you do."
+      },
+      {
+        "q": "How much does it cost?",
+        "a": "Nakavu is free right now. If paid features for large organisations arrive one day, basic coffee roulette stays free."
+      },
+      {
+        "q": "How do I delete my account?",
+        "a": "Account settings → “Delete account”. We remove your profile, match history and memberships in every workspace."
+      }
+    ]
+  },
+  "legal": {
+    "updated": "Updated 29 September 2026",
+    "privacy": {
+      "title": "Privacy policy",
+      "intro": "Nakavu collects the minimum needed to introduce people over coffee. We don’t sell data and we don’t show ads.",
+      "sections": [
+        {
+          "title": "What we collect",
+          "body": "Your email address to sign in; the profile you fill in yourself (name, job title, department, city, meeting format, languages, interests, photo); workspace memberships; match history and your “did you meet?” answers."
+        },
+        {
+          "title": "Why",
+          "body": "To make matches, send match emails and reminders, and show history and (anonymised) statistics to workspace admins."
+        },
+        {
+          "title": "Who sees your data",
+          "body": "Your profile and email are visible only to members of the workspaces you’re in. Admins see the member list and participation status, but not whether a specific pair met."
+        },
+        {
+          "title": "Where it’s stored",
+          "body": "In Supabase (database and authentication) in the EU. Emails are sent through Resend. Both process data only on our behalf."
+        },
+        {
+          "title": "How long",
+          "body": "As long as you have an account. Leaving a workspace deletes your history there; deleting your account deletes everything."
+        },
+        {
+          "title": "Your rights",
+          "body": "You can view and edit your profile any time, turn off emails, leave a workspace or delete your account. Under the GDPR you can also request a copy of your data — just write to us."
+        },
+        {
+          "title": "Cookies",
+          "body": "Only the essentials: your sign-in session, chosen language and theme. No third-party analytics."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of use",
+      "intro": "By using Nakavu you agree to these simple rules.",
+      "sections": [
+        {
+          "title": "The service",
+          "body": "Nakavu helps groups of people meet over coffee. We provide it “as is” and keep improving it."
+        },
+        {
+          "title": "Your account",
+          "body": "Use a real email address you control. You’re responsible for what happens under your account."
+        },
+        {
+          "title": "Behaviour",
+          "body": "Be kind. Don’t use Nakavu for spam, harassment or sales. Admins can remove members from their workspaces."
+        },
+        {
+          "title": "Workspaces",
+          "body": "Whoever creates a workspace is responsible for inviting its members and making sure they want to take part."
+        },
+        {
+          "title": "Liability",
+          "body": "Meetings happen directly between people. Nakavu doesn’t organise them and isn’t responsible for what happens over coffee."
+        },
+        {
+          "title": "Changes",
+          "body": "We may update these terms. We’ll email you in advance about material changes."
+        }
+      ]
+    }
   }
 }

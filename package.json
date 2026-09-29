@@ -20,7 +20,8 @@
     "prepare": "husky",
     "db:start": "supabase start -x vector,logflare",
     "db:reset": "supabase db reset",
-    "db:types": "supabase gen types typescript --local > app/types/database.ts"
+    "db:types": "supabase gen types typescript --local > app/types/database.ts",
+    "og": "node scripts/og-images.mjs"
   },
   "lint-staged": {
     "{app,server,shared,tests}/**/*.{ts,vue}": "eslint --fix"

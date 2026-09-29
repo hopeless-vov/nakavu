@@ -78,6 +78,10 @@ export default defineNuxtConfig({
     '/nl/auth/**': { ssr: false },
   },
 
+  nitro: {
+    prerender: { crawlLinks: true, routes: ['/', '/en', '/nl', '/sitemap.xml', '/robots.txt'] },
+  },
+
   runtimeConfig: {
     public: {
       siteUrl,

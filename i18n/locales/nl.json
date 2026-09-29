@@ -16,6 +16,30 @@
     "confirm": {
       "title": "Inloggen bevestigen",
       "description": "Bevestig je inlog bij Nakavu."
+    },
+    "home": {
+      "title": "Koffieroulette voor teams en vrienden",
+      "description": "Eén keer per maand (of in je eigen ritme) koppelt Nakavu je aan een willekeurige collega of vriend voor koffie. Slim matchen, gespreksstarters, drie talen."
+    },
+    "teams": {
+      "title": "Nakavu voor teams",
+      "description": "Koffieroulette voor bedrijven en kantoren: mensen uit verschillende teams ontmoeten elkaar elke maand bij de koffie. In een minuut ingericht, zonder integraties."
+    },
+    "friends": {
+      "title": "Nakavu voor vrienden",
+      "description": "Grote vriendengroep, club of community? Nakavu kiest elke maand wie met wie koffie drinkt, zodat niemand uit beeld raakt."
+    },
+    "faq": {
+      "title": "Vragen en antwoorden",
+      "description": "Hoe Nakavu mensen koppelt, wat anderen zien, hoe je een ronde overslaat en hoe we met privacy omgaan."
+    },
+    "privacy": {
+      "title": "Privacybeleid",
+      "description": "Welke gegevens Nakavu verzamelt, waarom, en hoe we ze beschermen."
+    },
+    "terms": {
+      "title": "Gebruiksvoorwaarden",
+      "description": "De regels voor het gebruik van Nakavu."
     }
   },
   "common": {
@@ -93,5 +117,334 @@
     "transferOwnership": "Draag het eigenaarschap eerst over aan iemand anders.",
     "lastOwner": "Een workspace heeft minstens één eigenaar nodig.",
     "duplicate": "Dat bestaat al."
+  },
+  "site": {
+    "nav": {
+      "label": "Hoofdnavigatie",
+      "teams": "Voor teams",
+      "friends": "Voor vrienden",
+      "faq": "Vragen",
+      "menu": "Menu"
+    },
+    "signIn": "Inloggen",
+    "openApp": "Open Nakavu",
+    "createWorkspace": "Workspace maken",
+    "footer": {
+      "blurb": "Koffieroulette voor mensen die in hele grote gebouwen werken — of elkaar gewoon al lang niet hebben gezien.",
+      "product": "Product",
+      "company": "Juridisch",
+      "privacy": "Privacy",
+      "terms": "Voorwaarden",
+      "copyright": "© {year} Nakavu. Gemaakt met liefde voor koffie en mensen."
+    },
+    "start": "Starten"
+  },
+  "person": {
+    "askMeAbout": "Vraag me over…"
+  },
+  "landing": {
+    "hero": {
+      "eyebrow": "Elke maand nieuwe matches",
+      "title": "Ontmoet de mensen die je {never} op de gang tegenkomt.",
+      "never": "nooit",
+      "subtitle": "Eén keer per maand koppelt Nakavu je aan iemand uit een andere hoek van het bedrijf — of aan een vriend die je al eeuwen niet hebt gezien. Een half uur koffie. Jij kiest tijd en plek.",
+      "create": "Workspace maken",
+      "join": "Ik heb een uitnodiging",
+      "note": "Gratis. Geen wachtwoorden. In het Oekraïens, Engels en Nederlands."
+    },
+    "reel": {
+      "0": {
+        "a": "Priya Raman",
+        "aTeam": "Payments",
+        "b": "Tomás Herrera",
+        "bTeam": "Risk",
+        "caption": "Payments ontmoet Risk"
+      },
+      "1": {
+        "a": "Olena Koval",
+        "aTeam": "Design",
+        "b": "Kenji Watanabe",
+        "bTeam": "Finance",
+        "caption": "Design × Finance: iemand leert Excel"
+      },
+      "2": {
+        "a": "Sem de Vries",
+        "aTeam": "Legal",
+        "b": "Amara Nwosu",
+        "bTeam": "Research",
+        "caption": "Allebei bakken ze zuurdesem"
+      },
+      "3": {
+        "a": "Marta Shevchuk",
+        "aTeam": "Boekenclub",
+        "b": "Daniel Okoye",
+        "bTeam": "Boekenclub",
+        "caption": "Vrienden die al lang geen koffie dronken"
+      }
+    },
+    "for": {
+      "label": "Voor",
+      "items": [
+        "bedrijven",
+        "kantoren",
+        "gilden en communities",
+        "vriendengroepen"
+      ]
+    },
+    "how": {
+      "eyebrow": "Zo werkt het",
+      "title": "Drie stappen, waarvan één koffie drinken is.",
+      "subtitle": "Geen agenda-koppelingen, geen chat, geen app om te installeren.",
+      "steps": [
+        {
+          "title": "Maak een workspace",
+          "body": "Een naam, een schema en een uitnodigingslink. Een minuut later kun je collega’s of vrienden uitnodigen."
+        },
+        {
+          "title": "Krijg je match",
+          "body": "Op de rondedag husselen we iedereen en mailen we met wie je afspreekt, wat jullie gemeen hebben en hoe je begint."
+        },
+        {
+          "title": "Drink koffie",
+          "body": "Zoek een half uur — op kantoor, in een café of via video. De rest is gewoon praten."
+        }
+      ]
+    },
+    "features": {
+      "eyebrow": "Tot in detail doordacht",
+      "title": "Willekeurig — maar niet lukraak.",
+      "items": {
+        "smart": {
+          "title": "Slim matchen",
+          "body": "Een gedeelde taal is verplicht. Geen herhaling met recente matches, een bonus voor gedeelde interesses, en andere teams gaan voor."
+        },
+        "rhythm": {
+          "title": "Jouw ritme",
+          "body": "Wekelijks, tweewekelijks, maandelijks, tweemaandelijks of per kwartaal. In jouw tijdzone."
+        },
+        "skip": {
+          "title": "Overslaan als het druk is",
+          "body": "Eén klik en je slaat de volgende ronde over. Of pauzeer tot je terug bent."
+        },
+        "many": {
+          "title": "Meerdere workspaces",
+          "body": "Werk, kantoor, club, vrienden — elk met eigen schema en mensen. Eén account."
+        },
+        "starters": {
+          "title": "Gespreksstarters",
+          "body": "Geen ongemakkelijke eerste vijf minuten: gedeelde interesses en een paar vragen in elke mail."
+        },
+        "private": {
+          "title": "Niets extra’s",
+          "body": "We lezen nooit je agenda of mail. Alleen het profiel dat je zelf invult, en alleen voor mensen in je workspace."
+        }
+      }
+    },
+    "audience": {
+      "teams": {
+        "eyebrow": "Voor teams",
+        "title": "Doorbreek silo’s bij de koffie.",
+        "body": "Nieuwe collega’s vinden hun mensen, teams leren elkaar kennen en collega’s op afstand krijgen eindelijk een gezicht.",
+        "cta": "Nakavu voor teams"
+      },
+      "friends": {
+        "eyebrow": "Voor vrienden",
+        "title": "Een grote groep — zonder dat iemand buiten valt.",
+        "body": "Clubs, alumni, vrienden van vrienden: elke maand drinkt iedereen koffie met iemand die ze al even niet spraken.",
+        "cta": "Nakavu voor vrienden"
+      }
+    },
+    "cta": {
+      "title": "Je volgende koffie staat klaar.",
+      "body": "Maak een workspace, deel de link — de eerste ronde start volgens jouw schema."
+    }
+  },
+  "audience": {
+    "teams": {
+      "eyebrow": "Voor bedrijven, kantoren en gilden",
+      "title": "Je collega’s zijn de interessantste mensen die je nog niet kent.",
+      "subtitle": "Elke maand stelt Nakavu mensen uit verschillende teams aan elkaar voor voor een half uur koffie. Nieuwe collega’s landen sneller, teams begrijpen elkaar beter en collega’s op afstand zijn geen avatars meer.",
+      "cta": "Teamworkspace maken",
+      "card": {
+        "eyebrow": "Jouw match voor oktober",
+        "name": "Tomás Herrera",
+        "role": "Data Engineer, Risk",
+        "fact1": "Lissabon",
+        "fact2": "Op kantoor of online",
+        "ask": "hoe je fraude herkent aan één croissantbestelling",
+        "shared": "Zuurdesem",
+        "other": "Jazz"
+      },
+      "why": "Waarom teams het fijn vinden",
+      "points": [
+        {
+          "title": "In een minuut ingericht",
+          "body": "Geen koppelingen met HR-systemen of agenda’s. Een uitnodigingslink en, als je wilt, een beperking op e-maildomein."
+        },
+        {
+          "title": "Eerst over teams heen",
+          "body": "Het algoritme vermijdt koppels uit dezelfde afdeling en mensen die elkaar net nog zagen."
+        },
+        {
+          "title": "Statistieken voor admins",
+          "body": "Hoeveel mensen meedoen, wie pauzeert en welk deel van de matches echt heeft afgesproken — per ronde."
+        },
+        {
+          "title": "Respecteert drukke weken",
+          "body": "Iedereen kan een ronde overslaan of pauzeren. Geen zeurende herinneringen."
+        }
+      ],
+      "closing": "Je eerste ronde kan deze maand al."
+    },
+    "friends": {
+      "eyebrow": "Voor vrienden, clubs en communities",
+      "title": "Zodat een grote groep klein blijft voelen.",
+      "subtitle": "Als je meer vrienden hebt dan vrije avonden, raakt er altijd iemand uit beeld. Nakavu kiest elke maand de koppels — jij hoeft alleen maar te komen.",
+      "cta": "Workspace voor vrienden maken",
+      "card": {
+        "eyebrow": "Jouw match voor oktober",
+        "name": "Marta Shevchuk",
+        "role": "Boekenclub Half acht",
+        "fact1": "Kyiv",
+        "fact2": "Het liefst in het echt",
+        "ask": "waarom ik hetzelfde boek drie keer las",
+        "shared": "Wandelen",
+        "other": "Fotografie"
+      },
+      "why": "Waarom het werkt voor vrienden",
+      "points": [
+        {
+          "title": "Geen “we moeten eens afspreken” meer",
+          "body": "Het koppel is al gekozen. Stuur een berichtje en prik een tijd."
+        },
+        {
+          "title": "Jouw ritme",
+          "body": "Wekelijks voor een hechte groep, per kwartaal voor alumni — wat past."
+        },
+        {
+          "title": "Trio’s kunnen ook",
+          "body": "Kies groepjes van drie voor wie dat prettiger vindt."
+        },
+        {
+          "title": "Elke stad",
+          "body": "In het echt of online — iedereen kiest zelf en wij houden er rekening mee."
+        }
+      ],
+      "closing": "Nodig iedereen uit met één link."
+    }
+  },
+  "faq": {
+    "title": "Vragen en antwoorden",
+    "subtitle": "Staat je vraag er niet bij? Schrijf ons — we antwoorden mensen, geen tickets.",
+    "more": "Alle vragen",
+    "items": [
+      {
+        "q": "Hoe kiest Nakavu de matches?",
+        "a": "Willekeurig, met regels. Een koppel moet een taal delen. We vermijden mensen die elkaar recent spraken, geven in werkworkspaces voorrang aan verschillende afdelingen, houden rekening met het formaat (in het echt of online) en geven een bonus voor gedeelde interesses."
+      },
+      {
+        "q": "Wanneer komen de matches?",
+        "a": "Op de dag en het uur die de admin koos, in de tijdzone van de workspace — bijvoorbeeld elke 1e van de maand om 9:00. Je krijgt een mail en ziet je match op je startscherm."
+      },
+      {
+        "q": "Wat ziet mijn match?",
+        "a": "Alleen wat in je profiel staat: naam, functie, stad, formaat, talen, interesses en “vraag me over…”. Alleen mensen in jouw workspaces zien je e-mailadres."
+      },
+      {
+        "q": "Kan ik een maand overslaan?",
+        "a": "Ja. In de workspace-instellingen staat “Volgende ronde overslaan” — daarna doe je automatisch weer mee. Of pauzeer tot je het zelf weer aanzet."
+      },
+      {
+        "q": "En bij een oneven aantal mensen?",
+        "a": "Dan komt iemand in een groepje van drie. Heeft iemand helemaal geen passende match (bijvoorbeeld geen gedeelde taal), dan laten we eerlijk weten dat er deze keer geen match is."
+      },
+      {
+        "q": "Kan ik in meerdere workspaces zitten?",
+        "a": "Ja: werk, kantoor, club, vrienden. Elke workspace heeft een eigen schema en je regelt je deelname per workspace."
+      },
+      {
+        "q": "Hoe houd ik een workspace binnen mijn bedrijf?",
+        "a": "Voeg bij het aanmaken toegestane e-maildomeinen toe, bijv. bedrijf.nl. De uitnodigingslink werkt dan alleen voor die adressen; persoonlijke uitnodigingen werken voor iedereen."
+      },
+      {
+        "q": "Waarom geen wachtwoord?",
+        "a": "We mailen je een knop en een 6-cijferige code. De code redt je als een zakelijk mailfilter de link “controleert” voordat jij dat doet."
+      },
+      {
+        "q": "Wat kost het?",
+        "a": "Nakavu is nu gratis. Als er ooit betaalde functies voor grote organisaties komen, blijft de basis-koffieroulette gratis."
+      },
+      {
+        "q": "Hoe verwijder ik mijn account?",
+        "a": "Accountinstellingen → “Account verwijderen”. We verwijderen je profiel, matchgeschiedenis en lidmaatschappen in alle workspaces."
+      }
+    ]
+  },
+  "legal": {
+    "updated": "Bijgewerkt op 29 september 2026",
+    "privacy": {
+      "title": "Privacybeleid",
+      "intro": "Nakavu verzamelt het minimum dat nodig is om mensen bij de koffie aan elkaar voor te stellen. We verkopen geen gegevens en tonen geen advertenties.",
+      "sections": [
+        {
+          "title": "Wat we verzamelen",
+          "body": "Je e-mailadres om in te loggen; het profiel dat je zelf invult (naam, functie, afdeling, stad, formaat, talen, interesses, foto); lidmaatschappen van workspaces; matchgeschiedenis en je antwoorden op “hebben jullie afgesproken?”."
+        },
+        {
+          "title": "Waarom",
+          "body": "Om matches te maken, matchmails en herinneringen te sturen en geschiedenis en (geanonimiseerde) statistieken aan workspace-admins te tonen."
+        },
+        {
+          "title": "Wie je gegevens ziet",
+          "body": "Je profiel en e-mail zijn alleen zichtbaar voor leden van jouw workspaces. Admins zien de ledenlijst en deelnamestatus, maar niet of een specifiek koppel heeft afgesproken."
+        },
+        {
+          "title": "Waar het staat",
+          "body": "Bij Supabase (database en authenticatie) in de EU. Mails gaan via Resend. Beide verwerken gegevens alleen in onze opdracht."
+        },
+        {
+          "title": "Hoe lang",
+          "body": "Zolang je een account hebt. Verlaat je een workspace, dan verdwijnt je geschiedenis daar; verwijder je je account, dan verdwijnt alles."
+        },
+        {
+          "title": "Jouw rechten",
+          "body": "Je kunt je profiel altijd bekijken en wijzigen, mails uitzetten, een workspace verlaten of je account verwijderen. Onder de AVG kun je ook een kopie van je gegevens opvragen — schrijf ons."
+        },
+        {
+          "title": "Cookies",
+          "body": "Alleen het noodzakelijke: je inlogsessie, gekozen taal en thema. Geen analytics van derden."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Gebruiksvoorwaarden",
+      "intro": "Door Nakavu te gebruiken ga je akkoord met deze eenvoudige regels.",
+      "sections": [
+        {
+          "title": "De dienst",
+          "body": "Nakavu helpt groepen mensen elkaar bij de koffie te ontmoeten. We leveren de dienst “zoals hij is” en blijven hem verbeteren."
+        },
+        {
+          "title": "Je account",
+          "body": "Gebruik een echt e-mailadres waar je bij kunt. Je bent verantwoordelijk voor wat er onder je account gebeurt."
+        },
+        {
+          "title": "Gedrag",
+          "body": "Wees vriendelijk. Gebruik Nakavu niet voor spam, intimidatie of verkoop. Admins kunnen leden uit hun workspace verwijderen."
+        },
+        {
+          "title": "Workspaces",
+          "body": "Wie een workspace maakt, is verantwoordelijk voor het uitnodigen van leden en dat zij willen meedoen."
+        },
+        {
+          "title": "Aansprakelijkheid",
+          "body": "Afspraken vinden direct tussen mensen plaats. Nakavu organiseert ze niet en is niet verantwoordelijk voor wat er bij de koffie gebeurt."
+        },
+        {
+          "title": "Wijzigingen",
+          "body": "We kunnen deze voorwaarden bijwerken. Over belangrijke wijzigingen mailen we je vooraf."
+        }
+      ]
+    }
   }
 }

@@ -12,6 +12,11 @@ export interface AppRoute {
 // onboarded — signed in with a finished profile.
 export const routes: AppRoute[] = [
   { name: 'home', path: '/', view: 'LandingView', meta: { access: 'public', layout: 'site' } },
+  { name: 'for-teams', path: '/for-teams', view: 'ForTeamsView', meta: { access: 'public', layout: 'site' } },
+  { name: 'for-friends', path: '/for-friends', view: 'ForFriendsView', meta: { access: 'public', layout: 'site' } },
+  { name: 'faq', path: '/faq', view: 'FaqView', meta: { access: 'public', layout: 'site' } },
+  { name: 'privacy', path: '/privacy', view: 'PrivacyView', meta: { access: 'public', layout: 'site' } },
+  { name: 'terms', path: '/terms', view: 'TermsView', meta: { access: 'public', layout: 'site' } },
   { name: 'sign-in', path: '/sign-in', view: 'SignInView', meta: { access: 'guest', layout: 'bare' } },
   { name: 'auth-confirm', path: '/auth/confirm', view: 'AuthConfirmView', meta: { access: 'public', layout: 'bare' } },
   { name: 'not-found', path: '/:pathMatch(.*)*', view: 'NotFoundView', meta: { access: 'public', layout: 'site' } },

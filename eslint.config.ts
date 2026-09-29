@@ -51,6 +51,7 @@ export default tseslint.config(
       '@typescript-eslint/naming-convention': [
         'warn',
         { selector: 'default', format: ['camelCase'], leadingUnderscore: 'allow' },
+        { selector: 'variable', modifiers: ['destructured'], format: null },
         { selector: 'import', format: ['camelCase', 'PascalCase'] },
         { selector: 'typeLike', format: ['PascalCase'] },
         { selector: 'variable', format: ['camelCase', 'UPPER_CASE', 'PascalCase'] },
@@ -94,7 +95,7 @@ export default tseslint.config(
   },
   {
     files: ['scripts/**/*.mjs'],
-    languageOptions: { globals: { process: 'readonly', console: 'readonly' } },
+    languageOptions: { globals: { process: 'readonly', console: 'readonly', document: 'readonly' } },
   },
   {
     ignores: ['app/types/database.ts', '.nuxt/', '.output/', 'node_modules/', 'coverage/', 'playwright-report/', 'test-results/', 'supabase/functions/**', 'supabase/templates/**'],

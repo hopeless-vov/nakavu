@@ -1,5 +1,14 @@
+<script setup lang="ts">
+import SiteFooter from '~/components/SiteFooter.vue'
+import SiteHeader from '~/components/SiteHeader.vue'
+</script>
+
 <template>
-  <div class="min-h-dvh bg-bg text-fg">
-    <slot />
+  <div class="grain flex min-h-dvh flex-col bg-bg text-fg">
+    <SiteHeader />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <SiteFooter />
   </div>
 </template>

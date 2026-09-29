@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { NuxtLink } from '#components'
 import { buttonClass, type ButtonSize, type ButtonVariant } from '~/utils/button-class'
-import { computed } from 'vue'
+import { computed, useAttrs } from 'vue'
 import type { RouteLocationRaw } from 'vue-router'
+
+defineOptions({ inheritAttrs: false })
 
 const props = withDefaults(
   defineProps<{
@@ -19,8 +21,16 @@ const props = withDefaults(
 )
 
 const emit = defineEmits<{ click: [event: MouseEvent] }>()
+const attrs = useAttrs()
 
-const classes = computed(() => buttonClass({ variant: props.variant, size: props.size, block: props.block }))
+// tailwind-merge lets callers override layout (e.g. `hidden sm:inline-flex`) without fighting the base classes.
+const classes = computed(() =>
+  buttonClass({ variant: props.variant, size: props.size, block: props.block, class: attrs.class as string | undefined }),
+)
+const rest = computed(() => {
+  const { class: _ignored, ...others } = attrs
+  return others
+})
 const inactive = computed(() => props.disabled || props.loading)
 
 function onClick(event: MouseEvent) {
@@ -35,6 +45,7 @@ function onClick(event: MouseEvent) {
 <template>
   <NuxtLink
     v-if="to"
+    v-bind="rest"
     :to="to"
     :class="classes"
     :aria-disabled="inactive || undefined"
@@ -44,6 +55,7 @@ function onClick(event: MouseEvent) {
   </NuxtLink>
   <a
     v-else-if="href"
+    v-bind="rest"
     :href="href"
     :class="classes"
     :aria-disabled="inactive || undefined"
@@ -53,6 +65,7 @@ function onClick(event: MouseEvent) {
   </a>
   <button
     v-else
+    v-bind="rest"
     :type="type"
     :class="classes"
     :disabled="inactive"
