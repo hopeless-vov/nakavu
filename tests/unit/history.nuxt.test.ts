@@ -1,6 +1,6 @@
 // @vitest-environment nuxt
 import { withSetup } from './helpers/with-setup'
-import { mountSuspended } from '@nuxt/test-utils/runtime'
+import { mockNuxtImport, mountSuspended } from '@nuxt/test-utils/runtime'
 import { flushPromises } from '@vue/test-utils'
 import { useNuxtApp } from '#imports'
 import { ALL, useHistory } from '~/composables/use-history'
@@ -19,11 +19,17 @@ const list: Match[] = [
   { id: 'm1', workspaceId: 'w1', workspaceName: 'Northwind', roundAt: '2026-06-01T07:00:00Z', myFeedback: 'skipped', partners: [] },
 ]
 
+const { navigateTo, route } = vi.hoisted(() => ({ navigateTo: vi.fn(), route: { query: {} as Record<string, string>, params: {}, fullPath: '/app/history' } }))
+mockNuxtImport('navigateTo', () => navigateTo)
+mockNuxtImport('useRoute', () => () => route)
+
 let matches: ReturnType<typeof useMatchesStore>
 
 beforeEach(async () => {
   await (useNuxtApp().$i18n as { setLocale: (l: string) => Promise<void> }).setLocale('uk')
   vi.restoreAllMocks()
+  navigateTo.mockReset()
+  route.query = {}
   matches = useMatchesStore()
   matches.$reset()
   vi.spyOn(matches, 'load').mockImplementation(async () => {
@@ -58,6 +64,25 @@ describe('useHistory', () => {
     set.mockRejectedValue(new Error('x'))
     await h.setFeedback('m2', 'met')
     expect(toast).toHaveBeenCalledWith('Щось пішло не так. Спробуйте ще раз.', 'error')
+  })
+
+  it('applies an answer from the email link, then clears the query', async () => {
+    route.query = { match: 'm2', answer: 'met' }
+    const set = vi.spyOn(matches, 'setFeedback').mockResolvedValue()
+    const toast = vi.spyOn(useToastStore(), 'show')
+    await withSetup(() => useHistory())
+    await flushPromises()
+    expect(set).toHaveBeenCalledWith('m2', 'met')
+    expect(toast).toHaveBeenCalledWith('Чудово! Дякуємо, що розповіли.', 'success')
+    expect(navigateTo).toHaveBeenCalledWith({ query: {} }, { replace: true })
+    route.query = { match: 'm2', answer: 'not_yet' }
+    await withSetup(() => useHistory())
+    await flushPromises()
+    expect(toast).toHaveBeenLastCalledWith('Гаразд, нагадаємо згодом.', 'default')
+    route.query = { match: 'm2', answer: 'hack' }
+    await withSetup(() => useHistory())
+    await flushPromises()
+    expect(set).toHaveBeenCalledTimes(2)
   })
 
   it('ignores a failed load', async () => {

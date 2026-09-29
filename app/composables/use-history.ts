@@ -1,3 +1,4 @@
+import { navigateTo, useRoute } from '#imports'
 import { useCatalog } from '~/composables/use-catalog'
 import { useMatchesStore } from '~/stores/matches'
 import { useToastStore } from '~/stores/toast'
@@ -7,6 +8,7 @@ import { computed, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 export const ALL = 'all'
+const FEEDBACK: MatchFeedback[] = ['met', 'not_yet', 'skipped']
 
 /** Past matches, filterable by workspace, with "did you meet?" answers. */
 export function useHistory() {
@@ -52,8 +54,19 @@ export function useHistory() {
     }
   }
 
-  onMounted(() => {
-    void matches.load().catch(() => undefined)
+  // Answers straight from the "did you meet?" email: /app/history?match=…&answer=met
+  const route = useRoute()
+  async function applyAnswerFromLink() {
+    const { match, answer } = route.query
+    if (typeof match !== 'string' || !FEEDBACK.includes(answer as MatchFeedback)) return
+    await setFeedback(match, answer as MatchFeedback)
+    toast.show(t(`match.feedback.toast.${answer}`), answer === 'met' ? 'success' : 'default')
+    await navigateTo({ query: {} }, { replace: true })
+  }
+
+  onMounted(async () => {
+    await matches.load().catch(() => undefined)
+    await applyAnswerFromLink()
   })
 
   return { matches, filter, workspaces, items, summary, setFeedback }

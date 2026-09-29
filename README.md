@@ -123,3 +123,22 @@ Local ports are shifted to `553xx` so Nakavu runs alongside other Supabase proje
 - All decisions live in `supabase/functions/_shared/rounds.ts` behind a `RoundsDb` interface and are unit-tested; `supabase-db.ts` is the thin Supabase adapter.
 - The pure logic in `shared/` is copied to `supabase/functions/_shared/lib/` by `npm run sync:shared`; a unit test fails if the copies drift.
 - Production setup: `supabase secrets set CRON_SECRET=… RESEND_API_KEY=… MAIL_FROM=… SITE_URL=…`, then add Vault secrets `project_url` and `cron_secret` (same value as `CRON_SECRET`) — see `supabase/migrations/*_cron.sql`.
+
+## Emails
+
+Two kinds, both in **uk / en / nl**:
+
+1. **Auth emails** (sign-in link + 6-digit code, email change, …) are Supabase Auth templates in `supabase/templates/` — see the section below.
+2. **Transactional emails** are queued in `email_outbox` and sent by the `send-emails` Edge Function through Resend:
+
+| Kind | When | Queued by |
+|---|---|---|
+| `match` | round day — partner card(s), shared interests, conversation starters, "say hi" mailto, `.ics` attachment | `run-due-rounds` |
+| `no_match` | round day, when nobody compatible was found | `run-due-rounds` |
+| `reminder` | three days before a round, with a one-click "skip" link | `run-due-rounds` |
+| `feedback` | halfway through a round: "did you meet?" with answer buttons (`/app/history?match=…&answer=…`) | `run-due-rounds` |
+| `invite` | a personal invite is created | DB trigger on `invites` |
+| `welcome` | onboarding finished | DB trigger on `profiles.onboarded_at` |
+| `goodbye` | account deleted | `delete_my_account()` |
+
+Templates live in `supabase/functions/_shared/email/` (`strings.ts` copy, `layout.ts` email-safe HTML with a dark-mode variant, `templates.ts` rendering, `outbox.ts` sending + retries up to 5 attempts). Every email has a plain-text part and a `List-Unsubscribe` header pointing at notification settings. Email HTML uses literal hex colours (clients don't support CSS variables) mirroring the theme tokens.
