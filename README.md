@@ -159,3 +159,35 @@ Templates live in `supabase/functions/_shared/email/` (`strings.ts` copy, `layou
 npx playwright install chromium
 npm run test:e2e
 ```
+
+## Deploy
+
+**1. Supabase (EU region)**
+
+```bash
+supabase link --project-ref <ref>
+supabase db push                                   # schema, RLS, triggers, cron
+supabase functions deploy run-due-rounds send-emails
+supabase secrets set CRON_SECRET=<random> RESEND_API_KEY=<key> MAIL_FROM="Nakavu <hello@your-domain>" SITE_URL=https://your-domain
+```
+
+Then in SQL: `select vault.create_secret('https://<ref>.supabase.co', 'project_url'); select vault.create_secret('<same CRON_SECRET>', 'cron_secret');` and configure Auth (Site URL, redirect URLs, templates, OTP expiry, SMTP) as described above.
+
+**2. Resend** — verify your sending domain (SPF/DKIM) and use it in `MAIL_FROM`.
+
+**3. Vercel** — import the repo (framework preset *Nuxt*, config in `vercel.json` adds security and caching headers) and set:
+
+| Variable | Value |
+|---|---|
+| `NUXT_PUBLIC_SITE_URL` | `https://your-domain` |
+| `NUXT_PUBLIC_SUPABASE_URL` | `https://<ref>.supabase.co` |
+| `NUXT_PUBLIC_SUPABASE_ANON_KEY` | project anon/publishable key |
+| `NUXT_PUBLIC_AUTH_PROVIDERS` | optional, e.g. `azure,google` (configure the providers in Supabase first) |
+
+Public pages are prerendered per locale (`nitro.prerender.crawlLinks`); `sitemap.xml` and `robots.txt` are generated.
+
+## CI
+
+`.github/workflows/ci.yml` runs lint, type check and unit tests with coverage thresholds; pgTAP against a fresh local Supabase; and Playwright (public + full journey) with a Playwright report on failure.
+
+Locally, big test runs boot many Nuxt test environments — on a memory-constrained machine use `VITEST_MAX_WORKERS=1 npm run test:coverage`.
