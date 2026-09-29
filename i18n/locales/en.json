@@ -563,5 +563,20 @@
     "fixErrors": "Please check the highlighted fields.",
     "privacy": "Only people in your workspaces can see this card.",
     "welcome": "Welcome, {name}! You’re in."
+  },
+  "app": {
+    "nav": {
+      "label": "App navigation",
+      "home": "Home",
+      "history": "History",
+      "workspaces": "Workspaces",
+      "account": "Account"
+    },
+    "menu": {
+      "open": "Account menu",
+      "account": "Account settings",
+      "newWorkspace": "Create a workspace",
+      "signOut": "Sign out"
+    }
   }
 }

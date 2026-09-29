@@ -563,5 +563,20 @@
     "fixErrors": "Controleer de gemarkeerde velden.",
     "privacy": "Alleen mensen in jouw workspaces zien deze kaart.",
     "welcome": "Welkom, {name}! Je doet mee."
+  },
+  "app": {
+    "nav": {
+      "label": "App-navigatie",
+      "home": "Home",
+      "history": "Geschiedenis",
+      "workspaces": "Workspaces",
+      "account": "Account"
+    },
+    "menu": {
+      "open": "Accountmenu",
+      "account": "Accountinstellingen",
+      "newWorkspace": "Workspace maken",
+      "signOut": "Uitloggen"
+    }
   }
 }
