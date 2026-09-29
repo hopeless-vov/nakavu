@@ -105,3 +105,5 @@ Local ports are shifted to `553xx` so Nakavu runs alongside other Supabase proje
 **RLS:** people see their own profile and profiles of people they share a workspace with; workspace data is visible to members; admins manage settings, invites and roles; matches are visible only to their participants. Column-level grants restrict what clients may update.
 
 **Storage:** public buckets `workspace-logos/<workspace_id>/…` (admins write) and `avatars/<user_id>/…` (owner writes).
+
+`npm run test:db` runs the pgTAP files in `supabase/tests/database/` through `psql` inside the local DB container (`scripts/test-db.mjs`), so it needs no Docker directory sharing.
