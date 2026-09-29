@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { NuxtLayout, NuxtPage, NuxtRouteAnnouncer } from '#components'
+import { ClientOnly, NuxtLayout, NuxtPage, NuxtRouteAnnouncer } from '#components'
 import { useHead, useLocaleHead } from '#imports'
+import AppToasts from '~/components/AppToasts.vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
@@ -19,4 +20,7 @@ useHead({
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
+  <ClientOnly>
+    <AppToasts />
+  </ClientOnly>
 </template>

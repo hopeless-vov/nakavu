@@ -40,6 +40,10 @@
     "terms": {
       "title": "Terms of use",
       "description": "The rules for using Nakavu."
+    },
+    "onboarding": {
+      "title": "Tell us about you",
+      "description": "Fill in your Nakavu profile."
     }
   },
   "common": {
@@ -446,5 +450,118 @@
         }
       ]
     }
+  },
+  "catalog": {
+    "formats": {
+      "in_person": "In person",
+      "online": "Online",
+      "both": "In person or online"
+    },
+    "languages": {
+      "uk": "Ukrainian",
+      "en": "English",
+      "nl": "Dutch",
+      "de": "German",
+      "fr": "French",
+      "es": "Spanish",
+      "pt": "Portuguese",
+      "it": "Italian",
+      "pl": "Polish",
+      "hi": "Hindi",
+      "zh": "Chinese",
+      "ar": "Arabic",
+      "tr": "Turkish",
+      "ja": "Japanese"
+    },
+    "interests": {
+      "coffee": "Coffee",
+      "sourdough": "Sourdough",
+      "cooking": "Cooking",
+      "board-games": "Board games",
+      "gaming": "Video games",
+      "hiking": "Hiking",
+      "running": "Running",
+      "cycling": "Cycling",
+      "climbing": "Climbing",
+      "yoga": "Yoga",
+      "football": "Football",
+      "jazz": "Jazz",
+      "concerts": "Concerts",
+      "podcasts": "Podcasts",
+      "reading": "Books",
+      "films": "Films",
+      "photography": "Photography",
+      "travel": "Travel",
+      "gardening": "Gardening",
+      "parenting": "Parenting",
+      "pets": "Pets",
+      "volunteering": "Volunteering",
+      "languages": "Learning languages",
+      "design": "Design",
+      "startups": "Startups"
+    },
+    "departments": {
+      "engineering": "Engineering",
+      "product": "Product",
+      "design": "Design",
+      "data": "Data",
+      "marketing": "Marketing",
+      "sales": "Sales",
+      "finance": "Finance",
+      "risk": "Risk",
+      "legal": "Legal",
+      "people": "People",
+      "operations": "Operations",
+      "customer-success": "Customer Success"
+    }
+  },
+  "profile": {
+    "about": "About you",
+    "firstName": "First name",
+    "firstNamePlaceholder": "Olena",
+    "lastName": "Last name",
+    "lastNamePlaceholder": "Koval",
+    "jobTitle": "Job title",
+    "jobTitlePlaceholder": "Product Owner",
+    "optionalForFriends": "Fine to leave empty for friends’ workspaces.",
+    "department": "Department or team",
+    "departmentPlaceholder": "Payments",
+    "city": "City or office",
+    "cityPlaceholder": "Amsterdam",
+    "meeting": "How do you like to meet?",
+    "meetingHint": "We’ll try to pair you with someone who likes the same.",
+    "formatHint": {
+      "in_person": "Coffee at the office or a café",
+      "online": "Video call, camera optional",
+      "both": "Whatever suits you both"
+    },
+    "languages": "Languages you’re happy to chat in",
+    "languagesHint": "We only pair people who share a language.",
+    "interests": "Things you could talk about",
+    "interestsHint": "Pick a few. Shared ones show up on your match’s card.",
+    "customInterest": "Add your own, e.g. birdwatching",
+    "add": "Add",
+    "askMeAbout": "Ask me about…",
+    "askPlaceholder": "the time I got lost in the office basement",
+    "errors": {
+      "firstName": "What should people call you?",
+      "languages": "Pick at least one language."
+    },
+    "preview": {
+      "label": "Live preview · what your match sees",
+      "name": "Your name",
+      "role": "Your role",
+      "interests": "Pick a few interests",
+      "ask": "something you could talk about for hours"
+    }
+  },
+  "onboarding": {
+    "eyebrow": "Takes two minutes",
+    "title": "Tell your future coffee partners about you",
+    "subtitle": "You can change all of it later in settings.",
+    "finish": "Finish and go to my dashboard",
+    "fixErrors": "Please check the highlighted fields.",
+    "privacy": "Only people in your workspaces can see this card.",
+    "welcome": "Welcome, {name}! You’re in."
   }
 }

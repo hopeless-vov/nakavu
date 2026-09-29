@@ -54,7 +54,7 @@ export default tseslint.config(
         { selector: 'variable', modifiers: ['destructured'], format: null },
         { selector: 'import', format: ['camelCase', 'PascalCase'] },
         { selector: 'typeLike', format: ['PascalCase'] },
-        { selector: 'variable', format: ['camelCase', 'UPPER_CASE', 'PascalCase'] },
+        { selector: 'variable', format: ['camelCase', 'UPPER_CASE', 'PascalCase'], leadingUnderscore: 'allow' },
         { selector: 'objectLiteralProperty', format: null },
         { selector: 'typeProperty', format: null },
         { selector: 'objectLiteralMethod', format: null },

@@ -19,5 +19,6 @@ export const routes: AppRoute[] = [
   { name: 'terms', path: '/terms', view: 'TermsView', meta: { access: 'public', layout: 'site' } },
   { name: 'sign-in', path: '/sign-in', view: 'SignInView', meta: { access: 'guest', layout: 'bare' } },
   { name: 'auth-confirm', path: '/auth/confirm', view: 'AuthConfirmView', meta: { access: 'public', layout: 'bare' } },
+  { name: 'onboarding', path: '/onboarding', view: 'OnboardingView', meta: { access: 'auth', layout: 'bare' } },
   { name: 'not-found', path: '/:pathMatch(.*)*', view: 'NotFoundView', meta: { access: 'public', layout: 'site' } },
 ]

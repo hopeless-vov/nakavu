@@ -13,6 +13,8 @@ const props = withDefaults(
     maxlength?: number
     autocomplete?: string
     inputmode?: 'text' | 'email' | 'numeric' | 'url'
+    /** id of a <datalist> with suggestions */
+    list?: string
     readonly?: boolean
     required?: boolean
   }>(),
@@ -79,6 +81,7 @@ function onKeydown(event: KeyboardEvent) {
       :maxlength="maxlength"
       :autocomplete="autocomplete"
       :inputmode="inputmode"
+      :list="list"
       :readonly="readonly"
       :required="required"
       :aria-invalid="!!error || undefined"
