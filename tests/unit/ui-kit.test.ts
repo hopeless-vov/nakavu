@@ -1,11 +1,8 @@
-import { nextTick } from 'vue'
-
 import { flushPromises, mount } from '@vue/test-utils'
-
 import AvatarBadge from '~/components/ui/AvatarBadge.vue'
 import BaseButton from '~/components/ui/BaseButton.vue'
-import BaseModal from '~/components/ui/BaseModal.vue'
 import BaseCard from '~/components/ui/BaseCard.vue'
+import BaseModal from '~/components/ui/BaseModal.vue'
 import ChipToggle from '~/components/ui/ChipToggle.vue'
 import CupMark from '~/components/ui/CupMark.vue'
 import EmptyState from '~/components/ui/EmptyState.vue'
@@ -17,6 +14,7 @@ import StatusPill from '~/components/ui/StatusPill.vue'
 import TextField from '~/components/ui/TextField.vue'
 import ToastStack from '~/components/ui/ToastStack.vue'
 import ToggleSwitch from '~/components/ui/ToggleSwitch.vue'
+import { nextTick } from 'vue'
 
 const NuxtLinkStub = { props: ['to'], template: '<a :data-to="JSON.stringify(to)" v-bind="$attrs"><slot /></a>' }
 const global = { stubs: { NuxtLink: NuxtLinkStub } }

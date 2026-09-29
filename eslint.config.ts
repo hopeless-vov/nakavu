@@ -56,6 +56,7 @@ export default tseslint.config(
         { selector: 'variable', format: ['camelCase', 'UPPER_CASE', 'PascalCase'] },
         { selector: 'objectLiteralProperty', format: null },
         { selector: 'typeProperty', format: null },
+        { selector: 'objectLiteralMethod', format: null },
       ],
 
       // File naming

@@ -1,1 +1,27 @@
-{ "brand": { "name": "Nakavu" }, "notFound": { "title": "404" } }
+{
+  "brand": {
+    "name": "Nakavu",
+    "tagline": "coffee roulette for teams and friends"
+  },
+  "seo": {
+    "ogAlt": "Two coffee cups leaning towards each other — Nakavu",
+    "notFound": { "title": "Page not found", "description": "Looks like this cup is empty." }
+  },
+  "common": {
+    "close": "Close",
+    "cancel": "Cancel",
+    "save": "Save",
+    "back": "Back",
+    "continue": "Continue",
+    "loading": "Loading…",
+    "remove": "Remove",
+    "somethingWrong": "Something went wrong. Please try again."
+  },
+  "theme": { "toggle": "Switch theme", "light": "Light", "dark": "Dark", "system": "System" },
+  "language": { "label": "Language" },
+  "notFound": {
+    "title": "No coffee here",
+    "body": "The page you’re looking for has moved or never existed.",
+    "home": "Back home"
+  }
+}

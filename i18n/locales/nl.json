@@ -1,1 +1,27 @@
-{ "brand": { "name": "Nakavu" }, "notFound": { "title": "404" } }
+{
+  "brand": {
+    "name": "Nakavu",
+    "tagline": "koffieroulette voor teams en vrienden"
+  },
+  "seo": {
+    "ogAlt": "Twee koffiekopjes die naar elkaar toe buigen — Nakavu",
+    "notFound": { "title": "Pagina niet gevonden", "description": "Dit kopje lijkt leeg te zijn." }
+  },
+  "common": {
+    "close": "Sluiten",
+    "cancel": "Annuleren",
+    "save": "Opslaan",
+    "back": "Terug",
+    "continue": "Verder",
+    "loading": "Laden…",
+    "remove": "Verwijderen",
+    "somethingWrong": "Er ging iets mis. Probeer het opnieuw."
+  },
+  "theme": { "toggle": "Thema wisselen", "light": "Licht", "dark": "Donker", "system": "Systeem" },
+  "language": { "label": "Taal" },
+  "notFound": {
+    "title": "Hier geen koffie",
+    "body": "De pagina die je zoekt is verhuisd of heeft nooit bestaan.",
+    "home": "Naar home"
+  }
+}

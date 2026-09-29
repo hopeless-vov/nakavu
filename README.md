@@ -77,3 +77,12 @@ tests/e2e/        Playwright
 ```
 
 Architecture and conventions are described in [CLAUDE.md](CLAUDE.md).
+
+## i18n & SEO
+
+- Locales: `uk` (default, no prefix), `en` (`/en/...`), `nl` (`/nl/...`). Files in `i18n/locales/`; a unit test keeps keys and `{placeholders}` identical across all three.
+- Browser language is detected on the first visit to `/` and remembered in the `nakavu_locale` cookie.
+- Every view calls `useSeo({ title, description, noindex?, jsonLd? })` — title template, description, Open Graph / Twitter cards (`/og/{locale}.png`), robots and JSON-LD.
+- `hreflang`, canonical and `<html lang>` come from `useLocaleHead` in `app.vue`.
+- `@nuxtjs/sitemap` and `@nuxtjs/robots` exclude the private app (`/app`, `/auth`, `/join`, `/onboarding`); public pages are prerendered per locale.
+- Composables that need i18n/router/head are tested in the Nuxt environment (`*.nuxt.test.ts`, `withSetup` helper).

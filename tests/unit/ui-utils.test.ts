@@ -1,11 +1,10 @@
-import { createPinia, setActivePinia } from 'pinia'
-import { nextTick } from 'vue'
-
 import { useTheme } from '~/composables/use-theme'
 import { TOAST_DURATION_MS, useToastStore } from '~/stores/toast'
 import { AVATAR_TONES, avatarTone, initials } from '~/utils/avatar'
 import { buttonClass } from '~/utils/button-class'
 import { THEME_STORAGE_KEY, themeBootScript } from '~/utils/theme'
+import { createPinia, setActivePinia } from 'pinia'
+import { nextTick } from 'vue'
 
 describe('avatar utils', () => {
   it('builds initials from names and ignores non-letters', () => {
