@@ -149,3 +149,13 @@ Templates live in `supabase/functions/_shared/email/` (`strings.ts` copy, `layou
 
 - **Local:** already wired in `supabase/config.toml` (see Mailpit at :55324).
 - **Production:** Dashboard → Authentication → Emails → paste each file and its subject (subjects are trilingual because Supabase subjects aren't per-user). Set *Site URL* to your domain and add `https://<domain>/**` to *Redirect URLs*. Set the OTP expiry to 900 s and enable custom SMTP (e.g. Resend SMTP) for your own sender address.
+
+## End-to-end tests (Playwright)
+
+- `tests/e2e/public.spec.ts` — public site in three languages, SEO tags (hreflang, OG, JSON-LD), real 404, language switcher, mobile menu, theme persistence, sign-in validation, route guard, and **axe WCAG 2 AA checks on every public page in light and dark mode**. Runs on desktop and a Pixel 7 profile.
+- `tests/e2e/flow.spec.ts` — the whole journey against local Supabase: sign in with the code from Mailpit → onboarding → create workspace → guest joins via the invite link → a round → match reveal → "Yes, we met" → history → admin. Needs `E2E_SUPABASE=1` and `SUPABASE_SERVICE_ROLE_KEY` (from `supabase status`).
+
+```bash
+npx playwright install chromium
+npm run test:e2e
+```
