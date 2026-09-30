@@ -1,5 +1,6 @@
 import { useIntervalFn } from '@vueuse/core'
-import { navigateTo, useLocalePath, useRoute, useRuntimeConfig } from '#imports'
+import { navigateTo, useLocalePath, useRoute } from '#imports'
+import { useSiteUrl } from '~/composables/use-site-url'
 import { useSessionStore } from '~/stores/session'
 import type { Locale } from '~/types/domain'
 import { safeNext } from '~/utils/access'
@@ -19,7 +20,7 @@ export function useSignIn() {
   const route = useRoute()
   const localePath = useLocalePath()
   const { locale } = useI18n()
-  const siteUrl = useRuntimeConfig().public.siteUrl as string
+  const siteUrl = useSiteUrl()
 
   const step = ref<'email' | 'code'>('email')
   const email = ref(typeof route.query.email === 'string' ? route.query.email : '')

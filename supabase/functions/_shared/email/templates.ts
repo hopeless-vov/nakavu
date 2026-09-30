@@ -122,7 +122,7 @@ export function renderEmail(kind: EmailKind, rawLocale: string, p: Payload, ctx:
   const locale = asLocale(rawLocale)
   const s = EMAIL_STRINGS[locale]
   const L = labels(locale)
-  const url = (path: string) => `${ctx.siteUrl}${localePath(locale, path)}`
+  const url = (path: string) => `${ctx.siteUrl.replace(/\/+$/, '')}${localePath(locale, path)}`
   const settingsUrl = url('/app/account')
   const skipUrl = p.workspaceSlug ? url(`/app/workspaces?ws=${encodeURIComponent(p.workspaceSlug)}`) : settingsUrl
   const headers = { 'List-Unsubscribe': `<${settingsUrl}>` }

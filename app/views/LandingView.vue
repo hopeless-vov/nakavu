@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLocalePath, useRuntimeConfig } from '#imports'
+import { useLocalePath } from '#imports'
 import BaseButton from '~/components/ui/BaseButton.vue'
 import FaqList from '~/components/ui/FaqList.vue'
 import FeatureCard from '~/components/ui/FeatureCard.vue'
@@ -8,12 +8,13 @@ import RouletteReel from '~/components/ui/RouletteReel.vue'
 import SectionHeading from '~/components/ui/SectionHeading.vue'
 import TwoCups from '~/components/ui/TwoCups.vue'
 import { useSeo } from '~/composables/use-seo'
+import { useSiteUrl } from '~/composables/use-site-url'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
-const siteUrl = useRuntimeConfig().public.siteUrl as string
+const siteUrl = useSiteUrl()
 
 const createTo = computed(() => localePath({ name: 'sign-in', query: { next: '/app/workspaces/new' } }))
 

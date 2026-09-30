@@ -1,6 +1,7 @@
 import { useClipboard } from '@vueuse/core'
-import { useLocalePath, useRuntimeConfig } from '#imports'
+import { useLocalePath } from '#imports'
 import * as invitesApi from '~/api/invites'
+import { useSiteUrl } from '~/composables/use-site-url'
 import { useSessionStore } from '~/stores/session'
 import { useWorkspacesStore } from '~/stores/workspaces'
 import type { Invite, MyWorkspace } from '~/types/domain'
@@ -10,7 +11,7 @@ import { computed, type MaybeRefOrGetter, ref, toValue } from 'vue'
 
 /** The invite link and personal email invites for one workspace. */
 export function useInvites(source: MaybeRefOrGetter<MyWorkspace | undefined>) {
-  const siteUrl = useRuntimeConfig().public.siteUrl as string
+  const siteUrl = useSiteUrl()
   const localePath = useLocalePath()
   const session = useSessionStore()
   const store = useWorkspacesStore()

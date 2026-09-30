@@ -1,4 +1,5 @@
-import { navigateTo, useLocalePath, useRuntimeConfig } from '#imports'
+import { navigateTo, useLocalePath } from '#imports'
+import { useSiteUrl } from '~/composables/use-site-url'
 import { useMatchesStore } from '~/stores/matches'
 import { useSessionStore } from '~/stores/session'
 import { useToastStore } from '~/stores/toast'
@@ -17,7 +18,7 @@ export function useAccount() {
   const session = useSessionStore()
   const toast = useToastStore()
   const localePath = useLocalePath()
-  const siteUrl = useRuntimeConfig().public.siteUrl as string
+  const siteUrl = useSiteUrl()
 
   const uploading = ref(false)
   async function uploadAvatar(file: File | null) {

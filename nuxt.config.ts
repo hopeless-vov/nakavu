@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { routes } from './app/router/routes'
 import { themeBootScript } from './app/utils/theme'
 
-const siteUrl = process.env.NUXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+const siteUrl = (process.env.NUXT_PUBLIC_SITE_URL ?? 'http://localhost:3000').replace(/\/+$/, '')
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-09-01',

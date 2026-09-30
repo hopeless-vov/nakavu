@@ -1,4 +1,5 @@
-import { useHead, useRuntimeConfig, useSeoMeta } from '#imports'
+import { useHead, useSeoMeta } from '#imports'
+import { useSiteUrl } from '~/composables/use-site-url'
 import { useI18n } from 'vue-i18n'
 
 export interface SeoOptions {
@@ -17,7 +18,7 @@ const OG_LOCALE: Record<string, string> = { uk: 'uk_UA', en: 'en_GB', nl: 'nl_NL
 /** Title, description, Open Graph/Twitter cards and JSON-LD for one view. */
 export function useSeo(options: SeoOptions) {
   const { t, locale } = useI18n()
-  const siteUrl = useRuntimeConfig().public.siteUrl as string
+  const siteUrl = useSiteUrl()
   const image = () => `${siteUrl}/og/${locale.value}.png`
 
   useSeoMeta({

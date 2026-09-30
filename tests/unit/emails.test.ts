@@ -120,6 +120,9 @@ describe('renderEmail', () => {
     expect(m.html).toContain('mailto:tomas%40nw.com,ann%40nw.com')
     expect(m.html).not.toContain('A few ways to start')
     expect(m.html).toContain('https://nakavu.app/en/app')
+    const slashed = renderEmail('match', 'en', matchPayload, { siteUrl: 'https://nakavu.app/' })
+    expect(slashed.html).toContain('https://nakavu.app/en/app')
+    expect(slashed.html).not.toContain('nakavu.app//')
   })
 
   it('renders no-match, reminder, feedback, invite, welcome and goodbye', () => {
